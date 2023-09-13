@@ -30,12 +30,13 @@
         <td>
             <h1>Jose Annunziato</h1>
 
+            <form action="index.html">
             <div>
             <label>Name:*</label>
-            <input value="Jose Annunziato" />
+            <input name="fullName" value="Jose Annunziato" />
             <label>Pronouns:</label>
             <select>
-                <option value="NONE">None</option>
+                <option name="pronouns" value="NONE">None</option>
             </select>
             </div>
             <label>Title:</label>
@@ -46,7 +47,7 @@
 
             <h3>Biography</h3>
             <p>Faculty, Software Engineer, AI, Space, and renewables enthusiast.</p>
-            <textarea cols="50">Faculty, Software Engineer, AI, Space, and renewables enthusiast.</textarea>
+            <textarea name="bio" cols="50">Faculty, Software Engineer, AI, Space, and renewables enthusiast.</textarea>
 
             <h3>Links</h3>
             <ul>
@@ -68,11 +69,11 @@
 
             <button>Add another link</button>
             <div>
-                <a href="index.html"><button>Cancel</button></a>
-                <a href="index.html"><button>Save Profile</button></a>
+                <a href="index.html"><button type="button">Cancel</button></a>
+                <button>Save Profile</button>
             </div>
+            </form>
             <button>Edit Profile</button><button>Cancel Editing</button>
-            
         </td>
     </tr>
 </table>
