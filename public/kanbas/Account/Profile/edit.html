@@ -28,27 +28,51 @@
         </td>
 
         <td>
-            <p>Jose Annuniato's Profile</p>
-            <hr>
-            <table width="40%">
-                <tr valign="baseline">
-                    <td>
-                        <h2>Jose Annunziato</h2>
-                    </td>
-                    <td>
-                        <a href="/Kanbas/Account/Profile/edit.html"><button>Edit Profile</button></a>
-                    </td>
-                </tr>
-            </table>
+            <h1>Jose Annunziato</h1>
+
+            <div>
+            <label>Name:*</label>
+            <input value="Jose Annunziato" />
+            <label>Pronouns:</label>
+            <select>
+                <option value="NONE">None</option>
+            </select>
+            </div>
+            <label>Title:</label>
+            <input />
 
             <h3>Contact</h3>
             <p>No registered services, you can add some on the <a href="#">settings</a> page.</p>
 
             <h3>Biography</h3>
             <p>Faculty, Software Engineer, AI, Space, and renewables enthusiast.</p>
+            <textarea cols="50">Faculty, Software Engineer, AI, Space, and renewables enthusiast.</textarea>
 
             <h3>Links</h3>
-            <a href="https://www.youtube.com/webdevtv" target="_blank">Youtube</a>
+            <ul>
+                <li><a href="https://www.youtube.com/webdevtv">Youtube</a> Links to an external site.</li>
+            </ul>
+            
+            <table>
+                <tr>
+                    <td align="center">
+                        <h4>Title</h4>
+                        <input value="Youtube"/>→
+                    </td>
+                    <td align="center">
+                        <h4>URL</h4>
+                        <input value="https://www.youtube.com/webdevtv"/><a href="#">Remove</a>
+                    </td>
+                </tr>
+            </table>
+
+            <button>Add another link</button>
+            <div>
+                <a href="index.html"><button>Cancel</button></a>
+                <a href="index.html"><button>Save Profile</button></a>
+            </div>
+            <button>Edit Profile</button><button>Cancel Editing</button>
+            
         </td>
     </tr>
 </table>
