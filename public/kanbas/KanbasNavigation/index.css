@@ -1,0 +1,53 @@
+.wd-kanbas-nav {
+    background-color: black;
+    height: 100vh;
+    text-align: center;
+}
+
+.wd-logo {
+    color: red;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 56px;
+    padding: 0;
+    margin: 0;
+}
+
+.wd-kanbas-nav ul {
+    display: inline;
+    padding: 0;
+    margin: 0;
+}
+
+.wd-kanbas-nav li {
+    list-style: none;
+    text-align: center;
+    padding: 4px;
+    font-size: 14px;
+}
+
+.wd-kanbas-nav a, .wd-kanbas-nav a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+#wd-selected {
+    background-color: white;
+}
+
+#wd-selected a {
+    color: red;
+}
+
+.wd-kanbas-nav i {
+    color: red;
+    font-size: 36px;
+}
+
+
+#wd-account {
+    color: white;
+}
+
+#wd-selected #wd-account {
+    color: gray;
+}
