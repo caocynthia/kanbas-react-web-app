@@ -2,6 +2,7 @@
     background-color: black;
     height: 100vh;
     text-align: center;
+    width: 84px;
 }
 
 .wd-logo {
@@ -21,7 +22,8 @@
 .wd-kanbas-nav li {
     list-style: none;
     text-align: center;
-    padding: 4px;
+    padding: 5px;
+    margin: 5px 0 5px 0;
     font-size: 14px;
 }
 
@@ -30,11 +32,11 @@
     text-decoration: none;
 }
 
-#wd-selected {
+.wd-kanbas-nav #wd-selected {
     background-color: white;
 }
 
-#wd-selected a {
+.wd-kanbas-nav #wd-selected a {
     color: red;
 }
 

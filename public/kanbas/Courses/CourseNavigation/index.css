@@ -1,0 +1,23 @@
+.wd-sub-nav {
+    margin-top: 8px;
+    width: 200px;
+}
+
+.wd-sub-nav li {
+    list-style: none;
+    padding: 4px;
+    font-size: 16px;
+}
+
+.wd-sub-nav a, .wd-sub-nav a:hover {
+    color: #cc0000;
+    text-decoration: none;
+}
+
+.wd-sub-nav #wd-selected {
+    border-left: 3px solid black;
+}
+
+.wd-sub-nav #wd-selected a {
+    color: black;
+}

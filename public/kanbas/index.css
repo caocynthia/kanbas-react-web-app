@@ -1,0 +1,165 @@
+/* General */
+.wd-page-spacing {
+    flex-direction: column;
+    gap: 32px;
+}
+
+.wd-left-padding {
+    padding-left: 84px;
+}
+/* ------------------------------------------------------------------ */
+
+/* Kanbas Navigation */
+.wd-kanbas-nav {
+    background-color: black;
+    height: 100vh;
+    text-align: center;
+    width: 84px;
+    position: fixed;
+}
+
+.wd-logo {
+    color: red;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 56px;
+    padding: 0;
+    margin: 0;
+}
+
+.wd-kanbas-nav ul {
+    display: inline;
+    padding: 0;
+    margin: 0;
+}
+
+.wd-kanbas-nav li {
+    list-style: none;
+    text-align: center;
+    padding: 5px;
+    margin: 5px 0 5px 0;
+    font-size: 14px;
+}
+
+.wd-kanbas-nav a,
+.wd-kanbas-nav a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+.wd-kanbas-nav #wd-selected {
+    background-color: white;
+}
+
+.wd-kanbas-nav #wd-selected a {
+    color: red;
+}
+
+.wd-kanbas-nav i {
+    color: red;
+    font-size: 36px;
+}
+
+
+#wd-account {
+    color: white;
+}
+
+#wd-selected #wd-account {
+    color: gray;
+}
+/* ------------------------------------------------------------------ */
+
+/* Course Navigation */
+.wd-sub-nav {
+    margin-top: 8px;
+    min-width: 200px;
+}
+
+.wd-sub-nav li {
+    list-style: none;
+    padding: 4px;
+    font-size: 16px;
+}
+
+.wd-sub-nav a,
+.wd-sub-nav a:hover {
+    color: #cc0000;
+    text-decoration: none;
+}
+
+.wd-sub-nav #wd-selected {
+    border-left: 3px solid black;
+}
+
+.wd-sub-nav #wd-selected a {
+    color: black;
+}
+/* ------------------------------------------------------------------ */
+
+/* Top Bar */
+.wd-top-bar {
+    margin-left: 32px;
+    margin-top: 16px;
+    margin-bottom: 24px;
+    padding: 8px 0 16px 0;
+    gap: 12px;
+    border-bottom: 1px solid gray;
+    align-items: center;
+    width: 90vw;
+    height: 64px;
+}
+
+.wd-hamburger {
+    font-size: 32px;
+    color: #cc0000;
+}
+/* ------------------------------------------------------------------ */
+
+/* Button */
+.btn-secondary{
+    background-color: #efefef;
+    border-color: #c7cdd1;
+    color: black;
+    padding: 4px 8px 4px 8px;
+}
+
+.btn-secondary:hover, .btn-secondary:active {
+    background-color: #e0e0e0;
+    border-color: #c7cdd1;
+    color: black;
+}
+/* ------------------------------------------------------------------ */
+
+/* Breadcrumb */
+.breadcrumb-item a, .breadcrumb-item a:hover {
+    color: #cc0000;
+}
+
+.breadcrumb-item {
+    font-size: 20px;
+}
+
+.breadcrumb-item.active, .breadcrumb-item+.breadcrumb-item::before {
+    color: black;
+}
+
+.breadcrumb {
+    margin-bottom: 0px;
+    color: black !important;
+}
+/* ------------------------------------------------------------------ */
+
+/* Modules */
+.wd-modules {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 32px;
+}
+/* ------------------------------------------------------------------ */
+
+/* Card Grid */
+.wd-card-container .card {
+    width: 300px;
+    padding: 0;
+}
