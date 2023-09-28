@@ -7,6 +7,11 @@
 .wd-left-padding {
     padding-left: 84px;
 }
+
+a, a:hover, a:active {
+    text-decoration: none;
+    color: #cc0000;
+}
 /* ------------------------------------------------------------------ */
 
 /* Kanbas Navigation */
@@ -69,10 +74,15 @@
 }
 /* ------------------------------------------------------------------ */
 
-/* Course Navigation */
+/* Course and Account Navigation */
 .wd-sub-nav {
     margin-top: 8px;
     min-width: 200px;
+}
+
+.wd-sub-nav ul {
+    position: sticky;
+    top: 20px;
 }
 
 .wd-sub-nav li {
@@ -103,7 +113,7 @@
     margin-bottom: 24px;
     padding: 8px 0 16px 0;
     gap: 12px;
-    border-bottom: 1px solid gray;
+    border-bottom: 1px solid rgb(180, 180, 180);
     align-items: center;
     width: 90vw;
     height: 64px;
@@ -123,11 +133,30 @@
     padding: 4px 8px 4px 8px;
 }
 
-.btn-secondary:hover, .btn-secondary:active {
+.btn-secondary:hover, 
+.btn-secondary:active {
     background-color: #e0e0e0;
     border-color: #c7cdd1;
     color: black;
 }
+
+.wd-red-button {
+    background-color: #cc0000;
+    border-color: #cc0000;
+    color: white;
+}
+
+.wd-red-button:hover, 
+.wd-red-button:active {
+    background-color: #900000;
+    border-color: #900000;
+    color: white;
+}
+
+.bi-x-lg {
+    font-size: 16px;
+}
+
 /* ------------------------------------------------------------------ */
 
 /* Breadcrumb */
@@ -151,15 +180,45 @@
 
 /* Modules */
 .wd-modules {
-    display: flex;
+    /* display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 16px; */
     margin-bottom: 32px;
 }
+
+.wd-modules li {
+    list-style-type: none;
+}
+/* ------------------------------------------------------------------ */
+
+/* Courses Right Bar */
+
 /* ------------------------------------------------------------------ */
 
 /* Card Grid */
 .wd-card-container .card {
     width: 300px;
     padding: 0;
+}
+/* ------------------------------------------------------------------ */
+
+/* Profile */
+.wd-profile-img {
+    font-size: 160px;
+    color: gray;
+}
+
+.wd-input {
+    border-color: rgb(180, 180, 180);
+    border-style: solid;
+    border-radius: 0.375rem;
+    border-width: 1px;
+    min-height: 40px;
+    justify-content: center;
+    padding: 8px;
+    background-color: transparent;
+}
+
+.wd-input a {
+    color: black;
 }
