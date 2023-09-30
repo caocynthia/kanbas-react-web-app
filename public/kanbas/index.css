@@ -4,7 +4,7 @@
     gap: 32px;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
     .wd-left-padding {
         position: absolute;
         left: 84px;
@@ -30,7 +30,6 @@ a, a:hover, a:active {
     padding-left: 20px;
     padding-right: 20px;
 }
-
 /* ------------------------------------------------------------------ */
 
 /* Kanbas Navigation */
@@ -147,7 +146,7 @@ a, a:hover, a:active {
 
 /* Button */
 .btn-secondary{
-    background-color: #efefef;
+    background-color: #f5f5f5;
     border-color: #c7cdd1;
     color: black;
     padding: 4px 8px 4px 8px;
@@ -217,6 +216,8 @@ a, a:hover, a:active {
 
 .wd-sub-list {
     padding: 0;
+    list-style-type: none;
+    border-left: 4px rgb(25, 135, 84) solid;
 }
 
 .wd-sub-list li {
@@ -225,6 +226,19 @@ a, a:hover, a:active {
 
 .list-group {
     border-radius: 0;
+    border-top: var(--bs-list-group-border-width) solid var(--bs-list-group-border-color);
+    border-left: var(--bs-list-group-border-width) solid var(--bs-list-group-border-color);
+    border-right: var(--bs-list-group-border-width) solid var(--bs-list-group-border-color);
+}
+
+.list-group-item {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+.list-group-item-secondary {
+    background-color: #f5f5f5;
 }
 
 .bi-check-circle-fill {
@@ -286,4 +300,26 @@ a, a:hover, a:active {
 
 .wd-input a {
     color: black;
+}
+/* ------------------------------------------------------------------ */
+
+/* Assignments */
+.bg-primary {
+    background-color: transparent !important;
+    color: black;
+    font-weight: normal;
+    border-color: #c7cdd1;
+    border-width: 1px;
+    border-style: solid;
+}
+
+.wd-assignment-description {
+    font-weight: normal;
+    color: gray;
+    font-size: small;
+
+}
+
+.dropdown li {
+    padding-left: 0;
 }
