@@ -9,8 +9,8 @@
 </head>
 
 <body>
-    <container class="d-flex flex-row">
-        <div class="wd-kanbas-nav">
+    <container>
+        <div class="d-none d-md-block wd-kanbas-nav">
             <p class="wd-logo">N</p>
             <ul class="wd-nav-bar">
                 <li><a href="/kanbas/Account/Profile/index.html"><i id="wd-account" class="bi bi-person-circle"></i><br />
@@ -36,8 +36,8 @@
             </ul>
         </div>
 
-        <div class="wd-left-padding">
-            <div>
+        <div class="wd-left-padding container">
+            <div class="d-none d-md-inline">
                 <div class="d-flex flex-row wd-top-bar">
                     <i class="bi bi-list wd-hamburger"></i>
                     <nav class="wd-center" style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
@@ -48,8 +48,9 @@
                     </nav>
                 </div>
             </div>
-            <div class="d-flex flex-row wd-page-spacing">
-                <div class="wd-sub-nav">
+
+            <div class="row">
+                <div class="col-2 d-none d-lg-inline wd-sub-nav">
                     <ul>
                         <li id="wd-selected"><a href="/Kanbas/Courses/Home/index.html">Home</a></li>
                         <li><a href="/Kanbas/Courses/Modules/index.html">Modules</a></li>
@@ -72,130 +73,173 @@
                     </ul>
                 </div>
 
-                <div class="d-flex flex-lg-row flex-md-column mw-100">
-                <div class="d-flex flex-column mr-5">
-                    <div class="container-fluid">
-                    <div class="float-end">
-                        <button type="button" class="btn btn-secondary">Collapse All</button>
-                        <button type="button" class="btn btn-secondary">View Progress</button>
-                        <span class="dropdown">
-                            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Publish All
-                            </a>
-                        
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Publish All</a></li>
-                                <li><a class="dropdown-item" href="#">Option 2</a></li>
-                                <li><a class="dropdown-item" href="#">Option 3</a></li>
+                <div class="col">
+                    <div class="row wd-main-section gap-3">
+                        <div class="col d-flex flex-column">
+                            <div class="container-fluid">
+                                <div class="float-end">
+                                    <button type="button" class="btn btn-secondary">Collapse All</button>
+                                    <button type="button" class="btn btn-secondary">View Progress</button>
+                                    <span class="dropdown">
+                                        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            Publish All
+                                        </a>
+                                    
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="#">Publish All</a></li>
+                                            <li><a class="dropdown-item" href="#">Option 2</a></li>
+                                            <li><a class="dropdown-item" href="#">Option 3</a></li>
+                                        </ul>
+                                    </span>
+                                    <button type="button" class="btn btn-secondary wd-red-button"><i class="bi bi-plus-lg"></i>
+                                        Module</button>
+                                </div>
+                                <br />
+                            
+                                <div class="wd-modules mt-5 mt-md-4">
+                                <ol class="list-group pb-4">
+                                    <li class="list-group-item list-group-item-secondary d-flex justify-content-between align-items-start">
+                                        <div class="ms-2 me-auto">
+                                            <div class="fw-bold">
+                                                Week 0 - INTRO
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item wd-sub-list">
+                                        <div>
+                                            <div class="list-group-item fw-bold">LEARNING OBJECTIVES<i class="float-end bi bi-check-circle-fill text-success"></i></div>
+                                            <ul>
+                                                <li class="list-group-item">Introduction to the course
+                                                    <i class="float-end bi bi-check-circle-fill text-success"></i></li>
+                                                <li class="list-group-item">Learn what is Web Development
+                                                    <i class="float-end bi bi-check-circle-fill text-success"></i></li>
+                                                <li class="list-group-item">Creating a development environment
+                                                    <i class="float-end bi bi-check-circle-fill text-success"></i>
+                                                </li>
+                                                <li class="list-group-item">Creating a Web application
+                                                    <i class="float-end bi bi-check-circle-fill text-success"></i>
+                                                </li>
+                                                <li class="list-group-item">Getting started with the 1st assignment
+                                                    <i class="float-end bi bi-check-circle-fill text-success"></i>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item wd-sub-list">
+                                        <div class="list-group-item fw-bold">READING<i class="float-end bi bi-check-circle-fill text-success"></i></div>
+                                        <ul>
+                                            <li class="list-group-item">Full Stack Developer - Chapter 1 - Introduction<i class="float-end bi bi-check-circle-fill text-success"></i></li>
+                                            <li class="list-group-item">Full Stack Developer - Chapter 2 - Creating User Interface with HTML<i class="float-end bi bi-check-circle-fill text-success"></i></li>
+                                        </ul>
+                                    </li>
+                                    <li class="list-group-item wd-sub-list">
+                                        <div class="list-group-item fw-bold">SLIDES<i class="float-end bi bi-check-circle-fill text-success"></i></div>
+                                        <ul>
+                                            <li class="list-group-item"><a href="#">Introduction to Web Development Links to an external site</a>
+                                                <i class="float-end bi bi-check-circle-fill text-success"></i></li>
+                                            <li class="list-group-item"><a href="#">Creating an HTTP server with node.js Links to an external site.</a>
+                                                <i class="float-end bi bi-check-circle-fill text-success"></i></li>
+                                            <li class="list-group-item"><a href="#">Creating a React Application Links to an external site.</a>
+                                                <i class="float-end bi bi-check-circle-fill text-success"></i></li>
+                                        </ul>
+                                    </li>
+                                </ol>
+
+                                <ol class="list-group">
+                                    <li class="list-group-item list-group-item-secondary d-flex justify-content-between align-items-start">
+                                        <div class="ms-2 me-auto">
+                                            <div class="fw-bold">
+                                                Week 1 - HTML
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item wd-sub-list">
+                                        <div class="list-group-item fw-bold">LEARNING OBJECTIVES
+                                            <i class="float-end bi bi-check-circle-fill text-success"></i>
+                                        </div>
+                                        <ul>
+                                            <li class="list-group-item">Learn how to create user interfaces with HTML
+                                                <i class="float-end bi bi-check-circle-fill text-success"></i>
+                                            </li>
+                                            <li class="list-group-item">Keep working on assignment 1
+                                                <i class="float-end bi bi-check-circle-fill text-success"></i>
+                                            </li>
+                                            <li class="list-group-item">Deploy the assignment to Netlify
+                                                <i class="float-end bi bi-check-circle-fill text-success"></i>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="list-group-item wd-sub-list">
+                                        <div class="list-group-item fw-bold">READING
+                                            <i class="float-end bi bi-check-circle-fill text-success"></i>
+                                        </div>
+                                        <ul>
+                                            <li class="list-group-item">Full Stack Developer - Chapter 1 - Introduction
+                                                <i class="float-end bi bi-check-circle-fill text-success"></i>
+                                            </li>
+                                            <li class="list-group-item">Full Stack Developer - Chapter 2 - Creating User Interface with HTML
+                                                <i class="float-end bi bi-check-circle-fill text-success"></i>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="list-group-item wd-sub-list">
+                                        <div class="list-group-item fw-bold">SLIDES
+                                            <i class="float-end bi bi-check-circle-fill text-success"></i>
+                                        </div>
+                                        <ul>
+                                            <li class="list-group-item"><a href="#">Introduction to Web Development Links to an external site</a>
+                                            <i class="float-end bi bi-check-circle-fill text-success"></i></li>
+                                            <li class="list-group-item"><a href="#">Creating an HTTP server with node.js Links to an external site.</a>
+                                            <i class="float-end bi bi-check-circle-fill text-success"></i></li>
+                                            <li class="list-group-item"><a href="#">Creating a React Application Links to an external site.</a>
+                                            <i class="float-end bi bi-check-circle-fill text-success"></i></li>
+                                        </ul>
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-3">
+                        <h5>Course Status</h5>
+                        <div class="btn-group pb-2">
+                            <button type="button" class="btn btn-secondary"><i class="bi bi-check-circle-fill bi-x-circle"></i>
+                                Unpublish</button>
+                            <button type="button" class="btn text-light btn-success">
+                                <i class="bi bi-check-circle-fill text-success text-light"></i></i>
+                                Published</button>
+                        </div>
+
+                        <ul class="container wd-button-list">
+                            <li><a class="btn btn-secondary" href="#">Import Existing</a></li>
+                            <li><a class="btn btn-secondary" href="#">Import Commons</a></li>
+                            <li><a class="btn btn-secondary" href="#">Choose Home Page</a></li>
+                            <li><a class="btn btn-secondary" href="#">View Course Stream</a></li>
+                            <li><a class="btn btn-secondary" href="#">New Announcement</a></li>
+                            <li><a class="btn btn-secondary" href="#">New Analytics</a></li>
+                            <li><a class="btn btn-secondary" href="#">View Course Notifications</a></li>
+                        </ul>
+
+                        <div>
+                            <div class="d-inline p-3">
+                                <h5 class="float-start m-0">Coming Up</h5>
+                                <a class="float-end wd-coming-up-list" href="#"><i class="bi bi-calendar-event text-dark"></i>
+                                    View Calendar</a>
+                            </div>
+
+                            <hr>
+                            <ul class="wd-coming-up-list">
+                                <li><a href="#">Lecture</a><br />
+                                    CS4500.12631.202410<br />
+                                    Sep 7 at 11:45am</li>
+                                <li><a href="#">Lecture</a><br />
+                                    CS4550.12631.202410<br /> 
+                                    Sep 11 at 11:45am</li>
+                                <li><a href="#">CS5410 06 SP23 Lecture </a>
+                                    Sep 11 at 6pm</li>
                             </ul>
-                        </span>
-                        <button type="button" class="btn btn-secondary">Module</button>
+                        </div>
                     </div>
-                    
-                    <div class="wd-modules mt-5">
-                        <ol class="list-group">
-                            <li class="list-group-item list-group-item-secondary d-flex justify-content-between align-items-start">
-                                <div class="ms-2 me-auto">
-                                    <div class="fw-bold">
-                                        Week 0 - INTRO
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="list-group-item d-flex justify-content-between align-items-start">
-                                <div class="container-fluid">
-                                    <div class="fw-bold">LEARNING OBJECTIVES<i class="float-end bi bi-check-circle-fill text-success"></i></div>
-                                    <ul>
-                                        <li>Introduction to the course</li>
-                                        <li>Learn what is Web Development</li>
-                                        <li>Creating a development environment</li>
-                                        <li>Creating a Web application</li>
-                                        <li>Getting started with the 1st assignment</li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li class="list-group-item d-flex justify-content-between align-items-start">
-                                <div class="ms-2 me-auto">
-                                    <div class="fw-bold">READING</div>
-                                    <ul>
-                                        <li>Full Stack Developer - Chapter 1 - Introduction</li>
-                                        <li>Full Stack Developer - Chapter 2 - Creating User Interface with HTML</li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li class="list-group-item d-flex justify-content-between align-items-start">
-                                <div class="ms-2 me-auto">
-                                    <div class="fw-bold">SLIDES</div>
-                                    <ul>
-                                        <li><a href="#">Introduction to Web Development Links to an external site</a></li>
-                                        <li><a href="#">Creating an HTTP server with node.js Links to an external site.</a></li>
-                                        <li><a href="#">Creating a React Application LInks to an external site.</a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                        </ol>
-
-                        <ol class="list-group">
-                            <li class="list-group-item list-group-item-secondary d-flex justify-content-between align-items-start">
-                                <div class="ms-2 me-auto">
-                                    <div class="fw-bold">Week 1 - HTML</div>
-                                </div>
-                            </li>
-                            <li class="list-group-item d-flex justify-content-between align-items-start">
-                                <div class="ms-2 me-auto">
-                                    <div class="fw-bold">LEARNING OBJECTIVES</div>
-                                    <ul>
-                                        <li>Learn how to create user interfaces with HTML</li>
-                                        <li>Keep working on assignment 1</li>
-                                        <li>Deploy the assignment to Netlify</li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li class="list-group-item d-flex justify-content-between align-items-start">
-                                <div class="ms-2 me-auto">
-                                    <div class="fw-bold">READING</div>
-                                    <ul>
-                                        <li>Full Stack Developer - Chapter 1 - Introduction</li>
-                                        <li>Full Stack Developer - Chapter 2 - Creating User Interface with HTML</li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li class="list-group-item d-flex justify-content-between align-items-start">
-                                <div class="ms-2 me-auto">
-                                    <div class="fw-bold">SLIDES</div>
-                                    <ul>
-                                        <li><a href="#">Introduction to Web Development Links to an external site</a></li>
-                                        <li><a href="#">Creating an HTTP server with node.js Links to an external site.</a></li>
-                                        <li><a href="#">Creating a React Application LInks to an external site.</a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                        </ol>
-                    </div>
-                </div>
-                </div>
-
-                <div class="pr-2 wd-right-bar">
-                    <h3>Course Status</h1>
-                    <button type="button" class="btn btn-secondary">Unpublish</button>
-                    <button type="button" class="btn btn-secondary">Published</button>
-                    <ul>
-                        <li class="btn btn-secondary"><a href="#">Import Existing</a></li>
-                        <li><a href="#">Import Commons</a></li>
-                        <li><a href="#">Choose Home Page</a></li>
-                        <li><a href="#">View Course Stream</a></li>
-                        <li><a href="#">New Announcement</a></li>
-                        <li><a href="#">New Analytics</a></li>
-                        <li><a href="#">View Course Notifications</a></li>
-                    </ul>
-
-                    <h3>Coming Up</h1>
-                    <a href="#">View Calendar</a>
-                    <ul>
-                        <li><a href="#">Lecture CS4500.12631.202410 Sep 7 at 11:45am</a></li>
-                        <li><a href="#">Lecture CS4550.12631.202410 Sep 11 at 11:45am</a></li>
-                        <li><a href="#">CS5410 06 SP23 Lecture Sep 11 at 6pm</a></li>
-                    </ul>
-                </div>
                 </div>
             </div>
         </div>

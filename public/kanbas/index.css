@@ -1,17 +1,36 @@
 /* General */
 .wd-page-spacing {
-    flex-direction: column;
+    display: grid;
     gap: 32px;
 }
 
-.wd-left-padding {
-    padding-left: 84px;
+@media screen and (min-width: 768px) {
+    .wd-left-padding {
+        position: absolute;
+        left: 84px;
+    }
+}
+
+.wd-main-section {
+    margin-left: 32px;
+    margin-right: 32px;
 }
 
 a, a:hover, a:active {
     text-decoration: none;
     color: #cc0000;
 }
+
+.col, .row, .container-fluid {
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
 /* ------------------------------------------------------------------ */
 
 /* Kanbas Navigation */
@@ -21,6 +40,7 @@ a, a:hover, a:active {
     text-align: center;
     width: 84px;
     position: fixed;
+    top: 0;
 }
 
 .wd-logo {
@@ -83,6 +103,7 @@ a, a:hover, a:active {
 .wd-sub-nav ul {
     position: sticky;
     top: 20px;
+    padding: 0;
 }
 
 .wd-sub-nav li {
@@ -108,15 +129,14 @@ a, a:hover, a:active {
 
 /* Top Bar */
 .wd-top-bar {
-    margin-left: 32px;
+    /* margin-left: 32px;
+    margin-right: 32px; */
     margin-top: 16px;
     margin-bottom: 24px;
     padding: 8px 0 16px 0;
     gap: 12px;
     border-bottom: 1px solid rgb(180, 180, 180);
     align-items: center;
-    width: 90vw;
-    height: 64px;
 }
 
 .wd-hamburger {
@@ -153,6 +173,10 @@ a, a:hover, a:active {
     color: white;
 }
 
+.btn-success {
+    padding: 4px 8px 4px 8px;
+}
+
 .bi-x-lg {
     font-size: 16px;
 }
@@ -186,18 +210,58 @@ a, a:hover, a:active {
     margin-bottom: 32px;
 }
 
-.wd-modules li {
+.wd-modules ul {
+    padding-left: 0;
     list-style-type: none;
+}
+
+.wd-sub-list {
+    padding: 0;
+}
+
+.wd-sub-list li {
+    padding-left: 52px;
+}
+
+.list-group {
+    border-radius: 0;
+}
+
+.bi-check-circle-fill {
+    font-size: 20px;
+    padding: 2px;
 }
 /* ------------------------------------------------------------------ */
 
 /* Courses Right Bar */
+.wd-button-list {
+    padding: 0;
+    list-style-type: none;
+    margin-top: 20px;
+}
 
+.wd-button-list li {
+    padding: 0;
+}
+
+.wd-button-list a {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 8px;
+}
+
+.wd-coming-up-list li{
+    list-style-image: url(calendar-event.svg);
+}
+
+.wd-coming-up-list {
+    font-size: 14px;
+}
 /* ------------------------------------------------------------------ */
 
 /* Card Grid */
 .wd-card-container .card {
-    width: 300px;
+    width: 262px;
     padding: 0;
 }
 /* ------------------------------------------------------------------ */
@@ -217,6 +281,7 @@ a, a:hover, a:active {
     justify-content: center;
     padding: 8px;
     background-color: transparent;
+    width: 100%;
 }
 
 .wd-input a {
