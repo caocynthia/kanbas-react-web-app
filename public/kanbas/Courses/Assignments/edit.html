@@ -43,8 +43,7 @@
                     <i class="bi bi-list wd-hamburger"></i>
                     <nav class="wd-center" style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a class="text-decoration-none"
-                                    href="/kanbas/Courses/Home/index.html">CS4550.19753.202410</a></li>
+                            <li class="breadcrumb-item"><a href="/kanbas/Courses/Home/index.html">CS4550.19753.202410</a></li>
                             <li class="breadcrumb-item active" aria-current="page">Assignments</li>
                         </ol>
                     </nav>
@@ -122,7 +121,7 @@
                                     <div class="text-end"><label>Points</label></div>
                                 </div>
 
-                                <div class="col col-md-5">
+                                <div class="col col-xl-5">
                                     <input class="wd-input" type="number" value="100" max="100" min="0" /> 
                                 </div>
                             </div>
@@ -132,7 +131,7 @@
                                     <div class="text-end"><label>Assignment Group</label></div>
                                 </div>
 
-                                <div class="col col-md-5">
+                                <div class="col col-xl-5">
                                     <span class="dropdown">
                                         <a class="d-inline-block wd-input text-dark" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                             ASSIGNMENTS
@@ -151,7 +150,7 @@
                                     <div class="text-end"><label>Display Grade as</label></div>
                                 </div>
                             
-                                <div class="col col-md-5">
+                                <div class="col col-xl-5">
                                     <span class="dropdown">
                                         <a class="d-inline-block wd-input text-dark" href="#" role="button" data-bs-toggle="dropdown"
                                             aria-expanded="false">
@@ -177,7 +176,7 @@
                                     <div class="text-end"><label>Submission Type</label></div>
                                 </div>
                             
-                                <div class="col-md-5 mb-3">
+                                <div class="col col-xl-5 mb-4">
                                     <div class="d-inline-block wd-input p-3">
                                         <span class="dropdown">
                                             <a class="d-inline-block wd-input text-dark" href="#" role="button" data-bs-toggle="dropdown"
@@ -229,7 +228,7 @@
                                     <div class="text-end"><label>Submission Attempts</label></div>
                                 </div>
                             
-                                <div class="col col-md-5 mb-3">
+                                <div class="col col-xl-5 mb-4">
                                     <span class="dropdown">
                                         <a class="d-inline-block wd-input text-dark" href="#" role="button" data-bs-toggle="dropdown"
                                             aria-expanded="false">
@@ -249,7 +248,7 @@
                                     <div class="text-end"><label>Plagiarism Review</label></div>
                                 </div>
                             
-                                <div class="col col-md-5">
+                                <div class="col col-xl-5 mb-4">
                                     <span class="dropdown">
                                         <a class="d-inline-block wd-input text-dark" href="#" role="button" data-bs-toggle="dropdown"
                                             aria-expanded="false">
@@ -263,202 +262,94 @@
                                     </span>
                                 </div>
                             </div>
+
+                            <div class="row">
+                                <div class="col-4 d-flex justify-content-end">
+                                    <div class="text-end"><label>Group Assignment</label></div>
+                                </div>
                             
-                            <label>Group Assignment</label>
-                            <div>
-                                <input type="checkbox" value="GROUP" name="check-entry" id="chkbox-group" />
-                                <label for="chkbox-group">This is a group assignment</label>
-                            </div>
-                            
-                            <label>Peer Review</label>
-                            <div>
-                                <input type="checkbox" value="PEER" name="check-entry" id="chkbox-peer" />
-                                <label for="chkbox-peer">Require Peer Reviews</label>
-                            </div>
-                            
-                            <label>Assign</label>
-                            <div>
-                                <label>Assign to</label>
-                                <div>
-                                    <input type="email" value="Everyone" />
+                                <div class="col col-md-5 mb-4">
+                                    <input type="checkbox" value="GROUP" name="check-entry" id="chkbox-group" />
+                                    <label for="chkbox-group">This is a group assignment</label>
                                 </div>
                             </div>
                             
-                            <label>Due</label><br />
-                            <input type="date" value="2021-01-01" max="2022-01-01" min="2020-01-01" /><br />
+                            <div class="row">
+                                <div class="col-4 d-flex justify-content-end">
+                                    <div class="text-end"><label>Peer Review</label></div>
+                                </div>
                             
-                            <label>Available from</label>
-                            <div>
-                                <input type="date" value="2021-01-01" />
+                                <div class="col col-md-5 mb-4">
+                                    <input type="checkbox" value="PEER" name="check-entry" id="chkbox-peer" />
+                                    <label for="chkbox-peer">Require Peer Reviews</label>
+                                </div>
                             </div>
+
+                            <div class="row">
+                                <div class="col-4 d-flex justify-content-end">
+                                    <div class="text-end"><label>Assign</label></div>
+                                </div>
                             
-                            <label>Until</label>
-                            <div>
-                                <input type="date" value="2021-01-01" />
+                                <div class="col col-md-5 mb-4">
+                                    <div class="wd-input overflow-hidden p-0">
+                                        <div class="d-flex flex-column gap-3 p-3">
+                                            <div>
+                                                <h6>Assign to</h6>
+                                                <div class="wd-input">
+                                                    <!-- <input class="wd-input" type="email" value="Everyone" /> -->
+                                                    <div class="bg-secondary d-inline-block px-2">
+                                                        Everyone 
+                                                        <a href="#"><i class="bi bi-x-lg"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <div>
+                                                <h6>Due</h6>
+                                                <div>
+                                                    <input class="wd-input" type="date" value="2021-01-01" max="2022-01-01" min="2020-01-01" />
+                                                </div>
+                                            </div>
+                                            
+                                            <div>
+                                                <div class="row gap-2">
+                                                    <div class="col">
+                                                        <h6>Available from</h6>
+                                                        <div>
+                                                            <input class="wd-input" type="date" value="2021-01-01" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="col">
+                                                        <h6>Until</h6>
+                                                        <div>
+                                                            <input class="wd-input" type="date" value="2021-01-01" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <button class="d-inline-block w-100 justify-content-center btn btn-secondary wd-bottom-button">
+                                            <i class="bi bi-plus-lg"></i>
+                                            Add</button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         
-                        <a href="index.html"><button type="button">Cancel</button></a>
-                        <a href="index.html"><button type="button">Save</button></a>
+                        <hr>
+                        <div class="mb-4 d-flex justify-content-between">
+                            <div>
+                                <input type="checkbox" id="grade" name="grade" value="Yes">
+                                <span>Notify user that this content has changed</span>
+                            </div>
+
+                            <div>
+                                <a href="index.html"><button class="btn btn-secondary" type="button">Cancel</button></a>
+                                <a href="index.html"><button class="btn btn-secondary wd-red-button" type="button">Save</button></a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
     </container>
 </body>
-
-<!-- <table width="100%">
-    <tr valign="top">
-        <td>
-            <ul>
-                <li><a href="/Kanbas/Account/Profile/index.html">Account</a></li>
-                <li><a href="/Kanbas/Dashboard/index.html">Dashboard</a></li>
-                <li><a href="/Kanbas/Courses/Home/index.html">Courses</a></li>
-                <li><a href="/Kanbas/Calendar/index.html">Calendar</a></li>
-                <li><a href="#">Inbox</a></li>
-                <li><a href="#">History</a></li>
-                <li><a href="#">Studio</a></li>
-                <li><a href="#">Commons</a></li>
-                <li><a href="#">Help</a></li>
-            </ul>
-        </td>
-
-        <td>
-            <ul>
-                <li><a href="/Kanbas/Courses/Home/index.html">Home</a></li>
-                <li><a href="/Kanbas/Courses/Modules/index.html">Modules</a></li>
-                <li><a href="#">Piazza</a></li>
-                <li><a href="#">Zoom Meetings</a></li>
-                <li><a href="/Kanbas/Courses/Assignments/index.html">Assignments</a></li>
-                <li><a href="#">Quizzes</a></li>
-                <li><a href="/Kanbas/Courses/Grades/grades.html">Grades</a></li>
-                <li><a href="#">People</a></li>
-                <li><a href="#">Panopto Video</a></li>
-                <li><a href="#">Discussions</a></li>
-                <li><a href="#">Announcements</a></li>
-                <li><a href="#">Pages</a></li>
-                <li><a href="#">Files</a></li>
-                <li><a href="#">Rubrics</a></li>
-                <li><a href="#">Outcomes</a></li>
-                <li><a href="#">Collaborations</a></li>
-                <li><a href="#">Syllabus</a></li>
-                <li><a href="#">Settings</a></li>
-            </ul>
-        </td>
-
-        <td>
-            <select id="select">
-                <option selected>SpeedGrader</option>
-            </select>
-            <hr>
-            
-            <h2><label for="assignmentName">Assignment Name</label></h2>
-            <input id="assignmentName" title="This is the name of the assignment" value="A1 - ENV + HTML" placeholder="Assignment 1" />
-            
-            <div>
-            <label>Description</label>
-            <div>
-                <textarea cols="30">This is the assignment description.</textarea>
-            </div>
-            </div>
-            
-            
-            <label>Points</label>
-            <div>
-            <input type="number" value="100" max="100" min="0"/>
-            </div>
-            
-            <div>
-                <div><label>Assignment Group</label></div>
-            <select id="select">
-                <option selected>ASSIGNMENTS</option>
-            </select>
-            </div>
-            
-            <div>
-            <div>
-            <label>Display Grade as</label>
-            </div>
-            <select id="select">
-                <option selected>Percentage</option>
-            </select>
-            </div>
-            
-            <div>
-            <div>
-            <label>Submission Type</label>
-            </div>
-            <select id="select">
-                <option selected value="ONLINE">Online</option>
-            </select>
-            </div>
-            
-            <div>
-            <div>
-            <label>Online Entry Options</label>
-            </div>
-            <input type="checkbox" value="TEXT" name="check-entry" id="chkbox-text" checked />
-            <label for="chkbox-text">Text Entry</label> <br />
-            <input type="checkbox" value="WEBSITE" name="check-entry" id="chkbox-website" />
-            <label for="chkbox-website">Website</label> <br />
-            <input type="checkbox" value="MEDIA" name="check-entry" id="chkbox-media" checked />
-            <label for="chkbox-media">Media Recordings</label> <br />
-            <input type="checkbox" value="STUDENT" name="check-entry" id="chkbox-student" />
-            <label for="chkbox-student">Student Annotations</label> <br />
-            <input type="checkbox" value="FILE" name="check-entry" id="chkbox-file" />
-            <label for="chkbox-file">File Uploads</label>
-            </div>
-            
-            <label>Submission Attempts</label>
-            <br />
-            <select id="select">
-                <option selected value="UNLIMITED">Unlimited</option>
-            </select>
-            <br />
-            
-            <div>
-                <div>
-            <label>Plagiarism Review</label>
-            </div>
-            <select id="select">
-                <option selected value="NONE">None</option>
-            </select>
-            </div>
-            
-            <label>Group Assignment</label>
-            <div>
-            <input type="checkbox" value="GROUP" name="check-entry" id="chkbox-group" />
-            <label for="chkbox-group">This is a group assignment</label>
-            </div>
-            
-            <label>Peer Review</label>
-            <div>
-            <input type="checkbox" value="PEER" name="check-entry" id="chkbox-peer" />
-            <label for="chkbox-peer">Require Peer Reviews</label>
-            </div>
-            
-            <label>Assign</label>
-            <div>
-            <label>Assign to</label>
-            <div>
-            <input type="email" value="Everyone" />
-            </div>
-            </div>
-            
-            <label>Due</label><br />
-            <input type="date" value="2021-01-01" max="2022-01-01" min="2020-01-01"/><br />
-            
-            <label>Available from</label>
-            <div>
-            <input type="date" value="2021-01-01" />
-            </div>
-            
-            <label>Until</label>
-            <div>
-            <input type="date" value="2021-01-01" />
-            </div>
-            
-            <a href="index.html"><button type="button">Cancel</button></a>
-            <a href="index.html"><button type="button">Save</button></a>
-        </td>
-    </tr>
-</table> -->
