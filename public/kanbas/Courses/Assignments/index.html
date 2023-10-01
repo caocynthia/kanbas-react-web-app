@@ -76,12 +76,27 @@
                 </div>
 
                 <div class="col wd-main-section">
-                    <input placeholder="Search for Assignments" />
-                    <button>Group</button>
-                    <button>Assignment</button>
-                    <select id="select">
-                        <option selected value="EDIT">Edit Assignment Dates</option>
-                    </select>
+                    <div class="d-flex justify-content-between">
+                        <div class="mw-40">
+                            <input class="wd-input" placeholder="Search for Assignments" />
+                        </div>
+                    
+                        <div class="">
+                            <button class="btn btn-secondary"><i class="bi bi-plus-lg"></i>
+                                Group</button>
+                            <button class="btn btn-secondary wd-red-button"><i class="bi bi-plus-lg"></i>
+                                Assignment</button>
+                            <span class="dropdown">
+                                <a class="btn btn-secondary" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="bi bi-three-dots-vertical"></i>
+                                </a>
+                            
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Edit Assignment Dates</a></li>
+                                </ul>
+                            </span>
+                        </div>
+                    </div>
                     <hr>
                     
                     <div class="wd-modules mt-5 mt-md-4">

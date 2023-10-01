@@ -21,7 +21,7 @@ a, a:hover, a:active {
     color: #cc0000;
 }
 
-.col, .row, .container-fluid {
+.col, .row, .container-fluid, .col-md-5 {
     padding: 0;
     margin: 0;
 }
@@ -29,6 +29,10 @@ a, a:hover, a:active {
 .container {
     padding-left: 20px;
     padding-right: 20px;
+}
+
+.bi-three-dots-vertical {
+    padding: 4px 0 4px 0;
 }
 /* ------------------------------------------------------------------ */
 
@@ -322,4 +326,8 @@ a, a:hover, a:active {
 
 .dropdown li {
     padding-left: 0;
+}
+
+.wd-input .d-block {
+    align-items: center;
 }
