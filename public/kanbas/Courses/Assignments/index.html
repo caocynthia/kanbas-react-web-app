@@ -5,6 +5,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"
         integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT"
         crossorigin="anonymous"></script>
+    <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.2/css/all.css" rel="stylesheet" />
     <link href="/kanbas/index.css" rel="stylesheet" />
 </head>
 
@@ -39,15 +40,21 @@
 
         <div class="wd-left-padding container">
             <div class="d-none d-lg-inline">
-                <div class="d-flex flex-row wd-top-bar">
-                    <i class="bi bi-list wd-hamburger"></i>
-                    <nav class="wd-center" style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
-                        <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a
-                                    href="/kanbas/Courses/Home/index.html">CS4550.19753.202410</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Assignments</li>
-                        </ol>
-                    </nav>
+                <div class="d-flex wd-top-bar justify-content-between">
+                    <div class="d-flex wd-top-bar border-0 p-0 m-0">
+                        <i class="bi bi-list wd-hamburger"></i>
+                        <nav class="wd-center" style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a
+                                        href="/kanbas/Courses/Home/index.html">CS4550.19753.202410</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Assignments</li>
+                            </ol>
+                        </nav>
+                    </div>
+
+                    <button class="btn btn-secondary">
+                        <i class="bi bi-eyeglasses"></i>
+                        Student View</button>
                 </div>
             </div>
 
@@ -103,9 +110,12 @@
                         <ol class="list-group mb-4">
                             <li class="list-group-item list-group-item-secondary d-flex justify-content-between align-items-start">
                                 <div class="container-fluid">
-                                    <div class="fw-bold">
-                                        Assignments
-                                        <div class="float-end">
+                                    <div class="d-flex justify-content-between fw-bold">
+                                        <div class="d-flex gap-2 align-items-center">
+                                            <i class="fa-solid fa-grip-vertical"></i>
+                                            Assignments
+                                        </div>
+                                        <div class="">
                                             <span class="badge bg-primary">40% of Total</span>
                                             <span class="dropdown">
                                                 <a class="text-dark" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -127,159 +137,225 @@
                                 </div>
                             </li>
                             <li class="wd-sub-list">
-                                <div class="list-group-item fw-bold">
-                                    <a class="text-dark" href="edit.html">A1 - ENV + HTML</a> <br />
-                                    <span class="float-end dropdown">
-                                        <a class="text-dark" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                            <i class="bi bi-three-dots-vertical"></i>
-                                        </a>
+                                <div class="list-group-item fw-bold d-flex justify-content-between align-items-center">
+                                    <div class="d-flex gap-3">
+                                        <div class="d-flex align-items-center gap-2">
+                                            <i class="fa-solid fa-grip-vertical"></i>
+                                            <i class="bi bi-pencil-square text-success"></i>
+                                        </div>
                                     
-                                        <ul class="dropdown-menu">
-                                            <li><a class="dropdown-item" href="#">Speed Grader</a></li>
-                                            <li><a class="dropdown-item" href="#">Duplicate</a></li>
-                                            <li><a class="dropdown-item" href="#">Delete</a></li>
-                                            <li><a class="dropdown-item" href="#">Move To ...</a></li>
-                                            <li><a class="dropdown-item" href="#">Send To ...</a></li>
-                                            <li><a class="dropdown-item" href="#">Copy To ...</a></li>
-                                            <li><a class="dropdown-item" href="#">Share to Commons</a></li>
-                                        </ul>
-                                    </span>
-                                    <i class="float-end bi bi-check-circle-fill text-success"></i>
+                                        <div class="">
+                                            <a class="text-dark" href="edit.html">A1 - ENV + HTML</a>
+                                            <div class="wd-assignment-description">
+                                                Week 0 - Setup <br />
+                                                Due: Sept 18, 2022 | 100 pts
+                                            </div>
+                                        </div>
+                                    </div>
 
-                                    <span class="wd-assignment-description">
-                                        Week 0 - Setup <br />
-                                        Due: Sept 18, 2022 | 100 pts
-                                    </span>
+                                    <div class="justify-content-end">
+                                        <i class="bi bi-check-circle-fill text-success"></i>
+                                        <span class="dropdown">
+                                            <a class="text-dark" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                <i class="bi bi-three-dots-vertical"></i>
+                                            </a>
+                                        
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item" href="#">Speed Grader</a></li>
+                                                <li><a class="dropdown-item" href="#">Duplicate</a></li>
+                                                <li><a class="dropdown-item" href="#">Delete</a></li>
+                                                <li><a class="dropdown-item" href="#">Move To ...</a></li>
+                                                <li><a class="dropdown-item" href="#">Send To ...</a></li>
+                                                <li><a class="dropdown-item" href="#">Copy To ...</a></li>
+                                                <li><a class="dropdown-item" href="#">Share to Commons</a></li>
+                                            </ul>
+                                        </span>
+                                    </div>
                                 </div>
                             </li>
                             <li class="wd-sub-list">
-                                <div class="list-group-item fw-bold">
-                                    <a class="text-dark" href="edit.html">A2 - CSS + BOOTSTRAP</a> <br />
-                                    <span class="float-end dropdown">
-                                        <a class="text-dark" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                            <i class="bi bi-three-dots-vertical"></i>
-                                        </a>
-                                    
-                                        <ul class="dropdown-menu">
-                                            <li><a class="dropdown-item" href="#">Speed Grader</a></li>
-                                            <li><a class="dropdown-item" href="#">Duplicate</a></li>
-                                            <li><a class="dropdown-item" href="#">Delete</a></li>
-                                            <li><a class="dropdown-item" href="#">Move To ...</a></li>
-                                            <li><a class="dropdown-item" href="#">Send To ...</a></li>
-                                            <li><a class="dropdown-item" href="#">Copy To ...</a></li>
-                                            <li><a class="dropdown-item" href="#">Share to Commons</a></li>
-                                        </ul>
-                                    </span>
-                                    <i class="float-end bi bi-check-circle-fill text-success"></i>
+                                <div class="list-group-item fw-bold d-flex justify-content-between align-items-center">
+                                    <div class="d-flex gap-3">
+                                        <div class="d-flex align-items-center gap-2">
+                                            <i class="fa-solid fa-grip-vertical"></i>
+                                            <i class="bi bi-pencil-square text-success"></i>
+                                        </div>
                             
-                                    <span class="wd-assignment-description">
-                                        Week 0 - Setup <br />
-                                        Due: Sept 18, 2022 | 100 pts
-                                    </span>
+                                        <div class="">
+                                            <a class="text-dark" href="edit.html">A2 - CSS</a>
+                                            <div class="wd-assignment-description">
+                                                Week 0 - Setup <br />
+                                                Due: Sept 18, 2022 | 100 pts
+                                            </div>
+                                        </div>
+                                    </div>
+                            
+                                    <div class="justify-content-end">
+                                        <i class="bi bi-check-circle-fill text-success"></i>
+                                        <span class="dropdown">
+                                            <a class="text-dark" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                <i class="bi bi-three-dots-vertical"></i>
+                                            </a>
+                            
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item" href="#">Speed Grader</a></li>
+                                                <li><a class="dropdown-item" href="#">Duplicate</a></li>
+                                                <li><a class="dropdown-item" href="#">Delete</a></li>
+                                                <li><a class="dropdown-item" href="#">Move To ...</a></li>
+                                                <li><a class="dropdown-item" href="#">Send To ...</a></li>
+                                                <li><a class="dropdown-item" href="#">Copy To ...</a></li>
+                                                <li><a class="dropdown-item" href="#">Share to Commons</a></li>
+                                            </ul>
+                                        </span>
+                                    </div>
                                 </div>
                             </li>
                             <li class="wd-sub-list">
-                                <div class="list-group-item fw-bold">
-                                    <a class="text-dark" href="edit.html">A3 - JS + REACT</a> <br />
-                                    <span class="float-end dropdown">
-                                        <a class="text-dark" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                            <i class="bi bi-three-dots-vertical"></i>
-                                        </a>
-                                    
-                                        <ul class="dropdown-menu">
-                                            <li><a class="dropdown-item" href="#">Speed Grader</a></li>
-                                            <li><a class="dropdown-item" href="#">Duplicate</a></li>
-                                            <li><a class="dropdown-item" href="#">Delete</a></li>
-                                            <li><a class="dropdown-item" href="#">Move To ...</a></li>
-                                            <li><a class="dropdown-item" href="#">Send To ...</a></li>
-                                            <li><a class="dropdown-item" href="#">Copy To ...</a></li>
-                                            <li><a class="dropdown-item" href="#">Share to Commons</a></li>
-                                        </ul>
-                                    </span>
-                                    <i class="float-end bi bi-check-circle-fill text-success"></i>
+                                <div class="list-group-item fw-bold d-flex justify-content-between align-items-center">
+                                    <div class="d-flex gap-3">
+                                        <div class="d-flex align-items-center gap-2">
+                                            <i class="fa-solid fa-grip-vertical"></i>
+                                            <i class="bi bi-pencil-square text-success"></i>
+                                        </div>
                             
-                                    <span class="wd-assignment-description">
-                                        Week 0 - Setup <br />
-                                        Due: Sept 18, 2022 | 100 pts
-                                    </span>
+                                        <div class="">
+                                            <a class="text-dark" href="edit.html">A3 - JS + REACT</a>
+                                            <div class="wd-assignment-description">
+                                                Week 0 - Setup <br />
+                                                Due: Sept 18, 2022 | 100 pts
+                                            </div>
+                                        </div>
+                                    </div>
+                            
+                                    <div class="justify-content-end">
+                                        <i class="bi bi-check-circle-fill text-success"></i>
+                                        <span class="dropdown">
+                                            <a class="text-dark" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                <i class="bi bi-three-dots-vertical"></i>
+                                            </a>
+                            
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item" href="#">Speed Grader</a></li>
+                                                <li><a class="dropdown-item" href="#">Duplicate</a></li>
+                                                <li><a class="dropdown-item" href="#">Delete</a></li>
+                                                <li><a class="dropdown-item" href="#">Move To ...</a></li>
+                                                <li><a class="dropdown-item" href="#">Send To ...</a></li>
+                                                <li><a class="dropdown-item" href="#">Copy To ...</a></li>
+                                                <li><a class="dropdown-item" href="#">Share to Commons</a></li>
+                                            </ul>
+                                        </span>
+                                    </div>
                                 </div>
                             </li>
                             <li class="wd-sub-list">
-                                <div class="list-group-item fw-bold">
-                                    <a class="text-dark" href="edit.html">A4 - STATE + REDUX</a> <br />
-                                    <span class="float-end dropdown">
-                                        <a class="text-dark" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                            <i class="bi bi-three-dots-vertical"></i>
-                                        </a>
-                                    
-                                        <ul class="dropdown-menu">
-                                            <li><a class="dropdown-item" href="#">Speed Grader</a></li>
-                                            <li><a class="dropdown-item" href="#">Duplicate</a></li>
-                                            <li><a class="dropdown-item" href="#">Delete</a></li>
-                                            <li><a class="dropdown-item" href="#">Move To ...</a></li>
-                                            <li><a class="dropdown-item" href="#">Send To ...</a></li>
-                                            <li><a class="dropdown-item" href="#">Copy To ...</a></li>
-                                            <li><a class="dropdown-item" href="#">Share to Commons</a></li>
-                                        </ul>
-                                    </span>
-                                    <i class="float-end bi bi-check-circle-fill text-success"></i>
+                                <div class="list-group-item fw-bold d-flex justify-content-between align-items-center">
+                                    <div class="d-flex gap-3">
+                                        <div class="d-flex align-items-center gap-2">
+                                            <i class="fa-solid fa-grip-vertical"></i>
+                                            <i class="bi bi-pencil-square text-success"></i>
+                                        </div>
                             
-                                    <span class="wd-assignment-description">
-                                        Week 0 - Setup <br />
-                                        Due: Sept 18, 2022 | 100 pts
-                                    </span>
+                                        <div class="">
+                                            <a class="text-dark" href="edit.html">A4 - STATE + REDUX</a>
+                                            <div class="wd-assignment-description">
+                                                Week 0 - Setup <br />
+                                                Due: Sept 18, 2022 | 100 pts
+                                            </div>
+                                        </div>
+                                    </div>
+                            
+                                    <div class="justify-content-end">
+                                        <i class="bi bi-check-circle-fill text-success"></i>
+                                        <span class="dropdown">
+                                            <a class="text-dark" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                <i class="bi bi-three-dots-vertical"></i>
+                                            </a>
+                            
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item" href="#">Speed Grader</a></li>
+                                                <li><a class="dropdown-item" href="#">Duplicate</a></li>
+                                                <li><a class="dropdown-item" href="#">Delete</a></li>
+                                                <li><a class="dropdown-item" href="#">Move To ...</a></li>
+                                                <li><a class="dropdown-item" href="#">Send To ...</a></li>
+                                                <li><a class="dropdown-item" href="#">Copy To ...</a></li>
+                                                <li><a class="dropdown-item" href="#">Share to Commons</a></li>
+                                            </ul>
+                                        </span>
+                                    </div>
                                 </div>
                             </li>
                             <li class="wd-sub-list">
-                                <div class="list-group-item fw-bold">
-                                    <a class="text-dark" href="edit.html">A5 - NODE + SESSION</a> <br />
-                                    <span class="float-end dropdown">
-                                        <a class="text-dark" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                            <i class="bi bi-three-dots-vertical"></i>
-                                        </a>
-                                    
-                                        <ul class="dropdown-menu">
-                                            <li><a class="dropdown-item" href="#">Speed Grader</a></li>
-                                            <li><a class="dropdown-item" href="#">Duplicate</a></li>
-                                            <li><a class="dropdown-item" href="#">Delete</a></li>
-                                            <li><a class="dropdown-item" href="#">Move To ...</a></li>
-                                            <li><a class="dropdown-item" href="#">Send To ...</a></li>
-                                            <li><a class="dropdown-item" href="#">Copy To ...</a></li>
-                                            <li><a class="dropdown-item" href="#">Share to Commons</a></li>
-                                        </ul>
-                                    </span>
-                                    <i class="float-end bi bi-check-circle-fill text-success"></i>
+                                <div class="list-group-item fw-bold d-flex justify-content-between align-items-center">
+                                    <div class="d-flex gap-3">
+                                        <div class="d-flex align-items-center gap-2">
+                                            <i class="fa-solid fa-grip-vertical"></i>
+                                            <i class="bi bi-pencil-square text-success"></i>
+                                        </div>
                             
-                                    <span class="wd-assignment-description">
-                                        Week 0 - Setup <br />
-                                        Due: Sept 18, 2022 | 100 pts
-                                    </span>
+                                        <div class="">
+                                            <a class="text-dark" href="edit.html">A5 - NODE + SESSION</a>
+                                            <div class="wd-assignment-description">
+                                                Week 0 - Setup <br />
+                                                Due: Sept 18, 2022 | 100 pts
+                                            </div>
+                                        </div>
+                                    </div>
+                            
+                                    <div class="justify-content-end">
+                                        <i class="bi bi-check-circle-fill text-success"></i>
+                                        <span class="dropdown">
+                                            <a class="text-dark" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                <i class="bi bi-three-dots-vertical"></i>
+                                            </a>
+                            
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item" href="#">Speed Grader</a></li>
+                                                <li><a class="dropdown-item" href="#">Duplicate</a></li>
+                                                <li><a class="dropdown-item" href="#">Delete</a></li>
+                                                <li><a class="dropdown-item" href="#">Move To ...</a></li>
+                                                <li><a class="dropdown-item" href="#">Send To ...</a></li>
+                                                <li><a class="dropdown-item" href="#">Copy To ...</a></li>
+                                                <li><a class="dropdown-item" href="#">Share to Commons</a></li>
+                                            </ul>
+                                        </span>
+                                    </div>
                                 </div>
                             </li>
                             <li class="wd-sub-list">
-                                <div class="list-group-item fw-bold">
-                                    <a class="text-dark" href="edit.html">A6 - MONGO + MONGOOSE</a> <br />
-                                    <span class="float-end dropdown">
-                                        <a class="text-dark" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                            <i class="bi bi-three-dots-vertical"></i>
-                                        </a>
-                                    
-                                        <ul class="dropdown-menu">
-                                            <li><a class="dropdown-item" href="#">Speed Grader</a></li>
-                                            <li><a class="dropdown-item" href="#">Duplicate</a></li>
-                                            <li><a class="dropdown-item" href="#">Delete</a></li>
-                                            <li><a class="dropdown-item" href="#">Move To ...</a></li>
-                                            <li><a class="dropdown-item" href="#">Send To ...</a></li>
-                                            <li><a class="dropdown-item" href="#">Copy To ...</a></li>
-                                            <li><a class="dropdown-item" href="#">Share to Commons</a></li>
-                                        </ul>
-                                    </span>
-                                    <i class="float-end bi bi-check-circle-fill text-success"></i>
+                                <div class="list-group-item fw-bold d-flex justify-content-between align-items-center">
+                                    <div class="d-flex gap-3">
+                                        <div class="d-flex align-items-center gap-2">
+                                            <i class="fa-solid fa-grip-vertical"></i>
+                                            <i class="bi bi-pencil-square text-success"></i>
+                                        </div>
                             
-                                    <span class="wd-assignment-description">
-                                        Week 0 - Setup <br />
-                                        Due: Sept 18, 2022 | 100 pts
-                                    </span>
+                                        <div class="">
+                                            <a class="text-dark" href="edit.html">A6 - MONGO + MONGOOSE</a>
+                                            <div class="wd-assignment-description">
+                                                Week 0 - Setup <br />
+                                                Due: Sept 18, 2022 | 100 pts
+                                            </div>
+                                        </div>
+                                    </div>
+                            
+                                    <div class="justify-content-end">
+                                        <i class="bi bi-check-circle-fill text-success"></i>
+                                        <span class="dropdown">
+                                            <a class="text-dark" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                <i class="bi bi-three-dots-vertical"></i>
+                                            </a>
+                            
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item" href="#">Speed Grader</a></li>
+                                                <li><a class="dropdown-item" href="#">Duplicate</a></li>
+                                                <li><a class="dropdown-item" href="#">Delete</a></li>
+                                                <li><a class="dropdown-item" href="#">Move To ...</a></li>
+                                                <li><a class="dropdown-item" href="#">Send To ...</a></li>
+                                                <li><a class="dropdown-item" href="#">Copy To ...</a></li>
+                                                <li><a class="dropdown-item" href="#">Share to Commons</a></li>
+                                            </ul>
+                                        </span>
+                                    </div>
                                 </div>
                             </li>
                         </ol>

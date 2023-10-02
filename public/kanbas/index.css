@@ -11,6 +11,13 @@
     }
 }
 
+@media screen and (max-width: 992px) {
+    .container {
+        max-width: none;
+    }
+}
+
+
 .wd-main-section {
     margin-left: 32px;
     margin-right: 32px;
@@ -153,11 +160,38 @@ a:hover {
     gap: 12px;
     border-bottom: 1px solid rgb(180, 180, 180);
     align-items: center;
+    height: 60px;
 }
 
 .wd-hamburger {
     font-size: 32px;
     color: #cc0000;
+}
+
+.wd-alternate-top {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 64px;
+    margin-top: 0;
+    padding: 0 20px 0 20px;
+    background-color: black;
+    border: 0;
+}
+
+.wd-alternate-top .wd-hamburger {
+    color: white;
+}
+
+@media screen and (max-width: 992px) {
+    .wd-alternate-below {
+        padding-top: 100px;
+    }
+}
+
+.wd-glasses {
+    font-size: 32px;
 }
 /* ------------------------------------------------------------------ */
 
@@ -196,7 +230,6 @@ a:hover {
 .bi-x-lg {
     font-size: 16px;
 }
-
 /* ------------------------------------------------------------------ */
 
 /* Breadcrumb */
@@ -237,8 +270,8 @@ a:hover {
     border-left: 4px rgb(25, 135, 84) solid;
 }
 
-.wd-sub-list li {
-    padding-left: 52px;
+.wd-sub-list .wd-indent {
+    padding-left: 40px;
 }
 
 .list-group {
@@ -278,7 +311,7 @@ a:hover {
 .wd-button-list a {
     width: 100%;
     text-align: left;
-    margin-bottom: 8px;
+    margin-bottom: 4px;
     text-decoration: none;
 }
 
@@ -295,7 +328,28 @@ a:hover {
 .wd-card-container .card {
     width: 262px;
     padding: 0;
+    height: fit-content;
 }
+
+.card-title {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 16px;
+}
+
+.card-text {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 13px;
+}
+
+.bi-pencil-square {
+    font-size: 20px;
+    color: gray;
+}
+
 /* ------------------------------------------------------------------ */
 
 /* Profile */
@@ -361,4 +415,25 @@ a:hover {
     border-left: 0;
     border-right: 0;
     border-bottom: 0;
+}
+/* ------------------------------------------------------------------ */
+
+/* Grades */
+.dropdown input {
+    border-style: none;
+    padding: 0;
+    margin: 0;
+    /* max-width: 85%; */
+}
+
+.dropdown textarea:focus,
+.drop-dopwn input:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.wd-grade-input {
+    display: inline;
+    text-align: center;
+    max-width: 40%;
 }
