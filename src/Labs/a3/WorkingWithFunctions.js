@@ -28,6 +28,7 @@ function WorkingWithFunctions() {
       <FindFunction />
       <FindIndex />
       <FilterFunction />
+      testing committt
     </div>
   );
 }
