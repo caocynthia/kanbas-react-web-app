@@ -16,7 +16,6 @@ function JavaScript() {
       <IfElse />
       <TernaryOperator />
       <WorkingWithFunctions />
-      testing testing
     </div>
   );
 }
