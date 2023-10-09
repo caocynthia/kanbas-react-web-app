@@ -30,7 +30,7 @@ function KanbasNavigation() {
   const { pathname } = useLocation();
   return (
     <div className="wd-kanbas-nav d-flex flex-column">
-      <img className="wd-logo" src={Logo} />
+      <img className="wd-logo" src={Logo} alt="Northeastern University logo" />
       {links.map((link, index) => (
         <Link
           key={index}

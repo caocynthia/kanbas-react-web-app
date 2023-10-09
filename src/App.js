@@ -1,6 +1,7 @@
 import HelloWorld from "./Labs/a3/HelloWorld";
 import Kanbas from "./Kanbas";
-import { Routes, Route, Navigate } from "react-router";
+import { Routes, Route } from "react-router";
+// import { Navigate } from "react-router";
 import AssignmentNav from "./AssignmentNav/AssignmentNav";
 import Labs from "./Labs";
 
