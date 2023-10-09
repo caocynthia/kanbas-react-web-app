@@ -1,0 +1,474 @@
+/* General */
+.wd-page-spacing {
+    display: grid;
+    gap: 32px;
+}
+
+@media screen and (min-width: 992px) {
+    .wd-left-padding {
+        position: absolute;
+        left: 84px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .container {
+        max-width: none;
+    }
+}
+
+
+.wd-main-section {
+    margin-left: 32px;
+    margin-right: 32px;
+}
+
+a,
+a:active {
+    text-decoration: none;
+    color: #cc0000;
+}
+
+a:hover {
+    color: #cc0000;
+    text-decoration: underline;
+}
+
+.col,
+.row,
+.container-fluid,
+.col-md-5 {
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.bi-three-dots-vertical {
+    padding: 4px 0 4px 0;
+}
+
+.dropdown a {
+    text-decoration: none;
+}
+
+/* ------------------------------------------------------------------ */
+
+/* Kanbas Navigation */
+.wd-kanbas-nav {
+    background-color: black;
+    height: 100vh;
+    text-align: center;
+    width: 84px;
+    position: fixed;
+    top: 0;
+}
+
+.wd-kanbas-nav a {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    font-size: 14px;
+}
+
+.wd-kanbas-nav a,
+.wd-kanbas-nav a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+.wd-kanbas-nav .active {
+    background-color: white;
+}
+
+.wd-kanbas-nav .active a, .wd-kanbas-nav i {
+    color: red;
+}
+
+.wd-kanbas-nav i {
+    font-size: 36px;
+}
+
+#wd-account {
+    color: white;
+}
+
+.active #wd-account{
+    color: gray;
+}
+
+.wd-alt-course-nav {
+    font-size: 20px;
+}
+
+.wd-alt-course-nav .bi-chevron-right {
+    color: gray;
+    padding-right: 20px;
+}
+
+/* ------------------------------------------------------------------ */
+
+/* Course and Account Navigation */
+.wd-sub-nav {
+    margin-top: 8px;
+    min-width: 200px;
+}
+
+.wd-sub-nav ul {
+    position: sticky;
+    top: 20px;
+    padding: 0;
+}
+
+.wd-sub-nav li {
+    list-style: none;
+    padding: 4px;
+    font-size: 16px;
+}
+
+.wd-sub-nav a {
+    color: #cc0000;
+    text-decoration: none;
+}
+
+.wd-sub-nav a:hover {
+    color: #cc0000;
+    text-decoration: underline;
+}
+
+.wd-sub-nav #wd-selected {
+    border-left: 3px solid black;
+}
+
+.wd-sub-nav #wd-selected a {
+    color: black;
+}
+
+.wd-alt-course-nav {
+    margin-top: 80px;
+}
+
+.wd-alt-course-nav li {
+    list-style-type: none;
+    padding-bottom: 8px;
+}
+
+/* ------------------------------------------------------------------ */
+
+/* Top Bar */
+.wd-top-bar {
+    /* margin-left: 32px;
+    margin-right: 32px; */
+    margin-top: 16px;
+    margin-bottom: 24px;
+    padding: 8px 0 16px 0;
+    gap: 12px;
+    border-bottom: 1px solid rgb(180, 180, 180);
+    align-items: center;
+    height: 60px;
+}
+
+.wd-hamburger {
+    font-size: 32px;
+    color: #cc0000;
+}
+
+.wd-alternate-top {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 64px;
+    margin-top: 0;
+    padding: 0 20px 0 20px;
+    background-color: black;
+    border: 0;
+    z-index: 1000;
+}
+
+.wd-alternate-top .wd-hamburger {
+    color: white;
+}
+
+@media screen and (max-width: 992px) {
+    .wd-alternate-below {
+        padding-top: 100px;
+    }
+}
+
+.wd-glasses {
+    font-size: 32px;
+}
+
+/* ------------------------------------------------------------------ */
+
+/* Button */
+.btn-secondary {
+    background-color: #f5f5f5;
+    border-color: #c7cdd1;
+    color: black;
+    padding: 4px 8px 4px 8px;
+}
+
+.btn-secondary:hover,
+.btn-secondary:active {
+    background-color: #e0e0e0;
+    border-color: #c7cdd1;
+    color: black;
+}
+
+.wd-red-button {
+    background-color: #cc0000;
+    border-color: #cc0000;
+    color: white;
+}
+
+.wd-red-button:hover,
+.wd-red-button:active {
+    background-color: #900000;
+    border-color: #900000;
+    color: white;
+}
+
+.btn-success {
+    padding: 4px 8px 4px 8px;
+}
+
+.bi-x-lg {
+    font-size: 16px;
+}
+
+/* ------------------------------------------------------------------ */
+
+/* Breadcrumb */
+.breadcrumb-item a,
+.breadcrumb-item a:hover {
+    color: #cc0000;
+}
+
+.breadcrumb-item {
+    font-size: 20px;
+}
+
+.breadcrumb-item.active,
+.breadcrumb-item+.breadcrumb-item::before {
+    color: black;
+}
+
+.breadcrumb {
+    margin-bottom: 0px;
+    color: black !important;
+}
+
+/* ------------------------------------------------------------------ */
+
+/* Modules */
+.wd-modules {
+    /* display: flex;
+    flex-direction: column;
+    gap: 16px; */
+    margin-bottom: 32px;
+}
+
+.wd-modules ul {
+    padding-left: 0;
+    list-style-type: none;
+}
+
+.wd-sub-list {
+    padding: 0;
+    list-style-type: none;
+    border-left: 4px rgb(25, 135, 84) solid;
+}
+
+.wd-sub-list .wd-indent {
+    padding-left: 40px;
+}
+
+.list-group {
+    border-radius: 0;
+    border-top: var(--bs-list-group-border-width) solid var(--bs-list-group-border-color);
+    border-left: var(--bs-list-group-border-width) solid var(--bs-list-group-border-color);
+    border-right: var(--bs-list-group-border-width) solid var(--bs-list-group-border-color);
+}
+
+.list-group-item {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+.list-group-item-secondary {
+    background-color: #f5f5f5;
+}
+
+.bi-check-circle-fill {
+    font-size: 20px;
+    padding: 2px;
+}
+
+/* ------------------------------------------------------------------ */
+
+/* Courses Right Bar */
+.wd-button-list {
+    padding: 0;
+    list-style-type: none;
+    margin-top: 20px;
+}
+
+.wd-button-list li {
+    padding: 0;
+}
+
+.wd-button-list a {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 4px;
+    text-decoration: none;
+}
+
+.wd-coming-up-list li {
+    list-style-image: url(calendar-event.svg);
+}
+
+.wd-coming-up-list {
+    font-size: 14px;
+}
+
+/* ------------------------------------------------------------------ */
+
+/* Card Grid */
+.wd-card-container .card {
+    width: 262px;
+    padding: 0;
+    height: fit-content;
+}
+
+.card-title {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 16px;
+}
+
+.card-text {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 13px;
+}
+
+.card-body .bi-pencil-square {
+    font-size: 20px;
+    color: gray;
+}
+
+/* ------------------------------------------------------------------ */
+
+/* Profile */
+.wd-profile-img {
+    font-size: 160px;
+    color: gray;
+}
+
+.wd-input {
+    border-color: rgb(180, 180, 180);
+    border-style: solid;
+    border-radius: 0.375rem;
+    border-width: 1px;
+    min-height: 40px;
+    justify-content: center;
+    padding: 8px;
+    background-color: transparent;
+    width: 100%;
+}
+
+.wd-input a {
+    color: black;
+    text-decoration: none;
+}
+
+/* ------------------------------------------------------------------ */
+
+/* Assignments */
+.bg-primary {
+    background-color: transparent !important;
+    color: black;
+    font-weight: normal;
+    border-color: #c7cdd1;
+    border-width: 1px;
+    border-style: solid;
+}
+
+.wd-assignment-description {
+    font-weight: normal;
+    color: gray;
+    font-size: small;
+
+}
+
+.dropdown li {
+    padding-left: 0;
+}
+
+.wd-input .d-block {
+    align-items: center;
+}
+
+.bg-secondary {
+    background-color: #e0e0e0 !important;
+}
+
+.bg-secondary .bi-x-lg {
+    font-size: 13px;
+    margin-left: 8px;
+}
+
+.wd-input .wd-bottom-button {
+    border-radius: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 0;
+}
+
+/* ------------------------------------------------------------------ */
+
+/* Grades */
+.dropdown input {
+    border-style: none;
+    padding: 0;
+    margin: 0;
+    /* max-width: 85%; */
+}
+
+.dropdown textarea:focus,
+.drop-dopwn input:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.wd-grade-input {
+    display: inline;
+    text-align: center;
+    max-width: 100%;
+}
+
+@media screen and (min-width: 992px) {
+    table {
+        table-layout: fixed;
+    }
+}
+
+.wd-student-name {
+    width: 30%;
+    text-align: left;
+}
+
+tr,
+td {
+    text-align: center;
+    vertical-align: middle;
+}

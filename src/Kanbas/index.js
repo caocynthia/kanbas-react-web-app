@@ -1,7 +1,9 @@
+import KanbasNavigation from "./KanbasNavigation";
+
 function Kanbas() {
   return (
-    <div>
-      <h1>Kanbas</h1>
+    <div className="d-flex">
+      <KanbasNavigation />
     </div>
   );
 }
