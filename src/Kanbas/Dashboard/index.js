@@ -1,7 +1,11 @@
+import KanbasNavigation from "../KanbasNavigation";
+import TopBar from "../Top Bar";
+
 function Dashboard() {
   return (
     <div>
-      {/* <TopBar /> */}
+      <KanbasNavigation />
+      <TopBar />
       {/* <CourseCards /> */}
     </div>
   );

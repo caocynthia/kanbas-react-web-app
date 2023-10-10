@@ -23,14 +23,13 @@
     margin-right: 32px;
 }
 
-a,
-a:active {
+a, a:active, a:hover {
     text-decoration: none;
     color: #cc0000;
 }
 
 a:hover {
-    color: #cc0000;
+    color: inherit;
     text-decoration: underline;
 }
 
@@ -67,31 +66,28 @@ a:hover {
     top: 0;
 }
 
-.wd-kanbas-nav a, .wd-kanbas-nav a:hover {
+.wd-kanbas-nav .active {
+    background-color: white;
+    color: red;
+}
+
+.wd-kanbas-nav a {
     display: flex;
     flex-direction: column;
     gap: 0;
     font-size: 14px;
     color: white;
     text-decoration: none;
-    margin-bottom: 6px;
-}
-
-.wd-kanbas-nav .active {
-    background-color: white;
-}
-
-.wd-kanbas-nav .active a, .wd-kanbas-nav i {
-    color: red;
+    margin: 2px 0 2px 0;
+    padding: 6px 0 4px 0;
 }
 
 .wd-kanbas-nav i {
-    font-size: 32px;
-    padding: 0;
-    margin: 0;
-    align-self: top;
-    height: 80%;
-    padding-bottom: 4px;
+    display: flex;
+    color: red;
+    justify-content: center;
+    font-size: 36px;
+    margin-bottom: 2px;
 }
 
 #wd-account {
