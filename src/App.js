@@ -4,7 +4,6 @@ import { Routes, Route } from "react-router";
 // import { Navigate } from "react-router";
 import AssignmentNav from "./AssignmentNav/AssignmentNav";
 import Labs from "./Labs";
-import Dashboard from "./Kanbas/Dashboard";
 
 function App() {
   return (
@@ -14,7 +13,6 @@ function App() {
       <Route path="/hello" element={<HelloWorld />} />
       <Route path="/Labs/*" element={<Labs />} />
       <Route path="/Kanbas/*" element={<Kanbas />} />
-      <Route path="/Kanbas/Dashboard" element={<Dashboard />} />
     </Routes>
   );
 }

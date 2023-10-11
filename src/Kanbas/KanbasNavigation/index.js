@@ -16,20 +16,20 @@ function KanbasNavigation() {
     "Help",
   ];
   const icons = [
-    <i id="wd-account" class="bi bi-person-circle"></i>,
-    <i class="bi bi-speedometer2"></i>,
-    <i class="bi bi-journals"></i>,
-    <i class="bi bi-calendar2-week"></i>,
-    <i class="bi bi-inbox"></i>,
-    <i class="bi bi-clock"></i>,
-    <i class="bi bi-play-btn"></i>,
-    <i class="bi bi-arrow-right-circle"></i>,
-    <i class="bi bi-question-circle"></i>,
+    <i id="wd-account" className="bi bi-person-circle"></i>,
+    <i className="bi bi-speedometer2"></i>,
+    <i className="bi bi-journals"></i>,
+    <i className="bi bi-calendar2-week"></i>,
+    <i className="bi bi-inbox"></i>,
+    <i className="bi bi-clock"></i>,
+    <i className="bi bi-play-btn"></i>,
+    <i className="bi bi-arrow-right-circle"></i>,
+    <i className="bi bi-question-circle"></i>,
   ];
 
   const { pathname } = useLocation();
   return (
-    <div className="wd-kanbas-nav d-none d-md-flex flex-column">
+    <div className="wd-kanbas-nav d-none d-lg-flex flex-column">
       <img className="wd-logo" src={Logo} alt="Northeastern University logo" />
       {links.map((link, index) => (
         <Link

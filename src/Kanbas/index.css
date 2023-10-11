@@ -7,7 +7,7 @@
 @media screen and (min-width: 992px) {
     .wd-left-spacing {
         position: absolute;
-        left: 84px;
+        left: 92px;
     }
 }
 
@@ -113,35 +113,25 @@ a:hover {
 .wd-sub-nav {
     margin-top: 8px;
     min-width: 200px;
-}
-
-.wd-sub-nav ul {
+    display: flex;
+    flex-direction: column;
     position: sticky;
     top: 20px;
     padding: 0;
 }
 
-.wd-sub-nav li {
-    list-style: none;
-    padding: 4px;
-    font-size: 16px;
-}
-
 .wd-sub-nav a {
+    padding: 4px;
     color: #cc0000;
     text-decoration: none;
 }
 
 .wd-sub-nav a:hover {
-    color: #cc0000;
     text-decoration: underline;
 }
 
-.wd-sub-nav #wd-selected {
-    border-left: 3px solid black;
-}
-
-.wd-sub-nav #wd-selected a {
+.wd-sub-nav .active, .wd-sub-nav a.active:hover {
+    border-left: 3px solid;
     color: black;
 }
 
@@ -158,8 +148,6 @@ a:hover {
 
 /* Top Bar */
 .wd-top-bar {
-    /* margin-left: 32px;
-    margin-right: 32px; */
     margin-top: 16px;
     margin-bottom: 24px;
     padding: 8px 0 16px 0;
@@ -204,15 +192,18 @@ a:hover {
 /* ------------------------------------------------------------------ */
 
 /* Button */
-.btn-secondary {
+button {
     background-color: #f5f5f5;
-    border-color: #c8c8c8;
+    border: solid 1px #c7cdd1;
+    border-radius: 4px !important;
     color: black;
-    padding: 4px 8px 4px 8px;
+    padding: 6px 10px 6px 10px;
+    display: flex;
+    gap: 4px;
 }
 
-.btn-secondary:hover,
-.btn-secondary:active {
+button:hover,
+button:active {
     background-color: #e0e0e0;
     border-color: #c7cdd1;
     color: black;
@@ -257,7 +248,7 @@ a:hover {
 }
 
 .breadcrumb {
-    margin-bottom: 0px;
+    margin: 0px !important;
     color: black !important;
 }
 
