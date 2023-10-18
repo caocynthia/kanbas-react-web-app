@@ -9,7 +9,6 @@ function Kanbas() {
     <div className="d-flex">
       <KanbasNavigation />
       <div className="wd-left-spacing wd-alternate-below container">
-        <TopBar />
         <Routes>
           <Route path="/" element={<Navigate to="Dashboard" />} />
           <Route path="Account" element={<h1>Account</h1>} />
