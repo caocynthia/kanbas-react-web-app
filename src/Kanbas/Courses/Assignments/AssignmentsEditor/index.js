@@ -18,15 +18,18 @@ function AssignmentEditor() {
     <div>
       <h2>Assignment Name</h2>
       <input value={assignment.title} className="form-control mb-2" />
-      <Link
-        to={`/Kanbas/Courses/${courseId}/Assignments`}
-        className="btn btn-danger"
-      >
-        Cancel
-      </Link>
-      <button onClick={handleSave} className="btn btn-success me-2">
-        Save
-      </button>
+      <hr />
+      <div className="d-flex justify-content-end gap-2">
+        <Link
+          to={`/Kanbas/Courses/${courseId}/Assignments`}
+          className="wd-btn wd-btn-red"
+        >
+          Cancel
+        </Link>
+        <button onClick={handleSave} className="wd-btn me-2">
+          Save
+        </button>
+      </div>
     </div>
   );
 }

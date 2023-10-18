@@ -5,7 +5,7 @@ function Modules() {
     <div className="">
       {/* <h2>Modules</h2> */}
 
-      <div className="d-flex justify-content-end gap-1">
+      <div className="d-flex justify-content-end gap-1 pb-3">
         <button type="button" className="wd-btn">
           Collapse All
         </button>
