@@ -51,7 +51,7 @@ function Home() {
         <div>
           <div className="d-flex flex-row justify-content-between align-items-bottom">
             <h5 className="">Coming Up</h5>
-            <a className="wd-coming-up-list d-flex gap-2" href="">
+            <a className="wd-coming-up-list d-flex gap-2" href="#">
               <i className="bi bi-calendar-event text-dark"></i>
               <div className="d-inline d-xl-none d-xxl-inline">
                 View Calendar
@@ -63,7 +63,7 @@ function Home() {
           <div className="d-flex wd-coming-up-list gap-2">
             <i className="bi bi-calendar-event"></i>
             <div className="">
-              <a href="">Lecture</a>
+              <a href="#">Lecture</a>
               <br />
               CS4500.12631.202410
               <br />
@@ -73,7 +73,7 @@ function Home() {
           <div className="d-flex wd-coming-up-list gap-2">
             <i className="bi bi-calendar-event"></i>
             <div className="">
-              <a href="">Lecture</a>
+              <a href="#">Lecture</a>
               <br />
               CS4550.12631.202410
               <br />
