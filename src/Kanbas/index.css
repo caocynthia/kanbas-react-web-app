@@ -314,32 +314,6 @@ a:hover {
 /* ------------------------------------------------------------------ */
 
 /* Courses Right Bar */
-.wd-button-list {
-    padding: 0;
-    list-style-type: none;
-    margin-top: 20px;
-}
-
-.wd-button-list li {
-    padding: 0;
-}
-
-.wd-button-list a {
-    width: 100%;
-    text-align: left;
-    margin-bottom: 4px;
-    text-decoration: none;
-}
-
-/* .wd-coming-up-list li {
-    background-image: url(calendar-event.svg);
-    background-repeat: no-repeat;
-    background-position: left top;
-    padding: 0 0 0px 20px;
-    list-style: none;
-    background-size: 14px;
-} */
-
 bi-calendar-event {
     font-size: 8px;
 }

@@ -1,4 +1,5 @@
 import Modules from "../Modules";
+import { Link } from "react-router-dom";
 
 function Home() {
   const shortcutLabels = [
@@ -24,46 +25,46 @@ function Home() {
       <div className="col">
         <Modules />
       </div>
-      <div className="col-xl-3">
-        <h5>Course Status</h5>
-        <div className="btn-group pb-2">
-          <button type="button" className="btn btn-light">
-            <i className="bi bi-check-circle-fill bi-x-circle"></i>
-            Unpublish
-          </button>
-          <button type="button" className="btn text-light btn-success">
-            <i className="bi bi-check-circle-fill text-success text-light"></i>
-            Published
-          </button>
+      <div className="col-xl-3 d-flex flex-column gap-3">
+        <div>
+          <h5>Course Status</h5>
+          <div className="btn-group pb-2">
+            <button type="button" className="btn btn-light">
+              <i className="bi bi-check-circle-fill bi-x-circle"></i>
+              Unpublish
+            </button>
+            <button type="button" className="btn text-light btn-success">
+              <i className="bi bi-check-circle-fill text-success text-light"></i>
+              Published
+            </button>
+          </div>
         </div>
 
-        <ul className="container wd-button-list">
+        <div className="container wd-button-list gap-2">
           {shortcutLabels.map((label, index) => (
-            <li key={index}>
-              <a className="wd-btn" href="#">
-                {shortcutIcons.at(index)}
-                {label}
-              </a>
-            </li>
+            <div key={index} className="d-flex wd-btn">
+              {shortcutIcons.at(index)}
+              {label}
+            </div>
           ))}
-        </ul>
+        </div>
 
         <div>
-          <div className="d-flex flex-row justify-content-between align-items-bottom">
-            <h5 className="">Coming Up</h5>
-            <a className="wd-coming-up-list d-flex gap-2" href="#">
+          <div className="d-flex flex-row justify-content-between align-items-end-center">
+            <h5 className="m-0">Coming Up</h5>
+            <Link className="wd-coming-up-list d-flex gap-2" to={{}}>
               <i className="bi bi-calendar-event text-dark"></i>
               <div className="d-inline d-xl-none d-xxl-inline">
                 View Calendar
               </div>
-            </a>
+            </Link>
           </div>
           <hr />
 
           <div className="d-flex wd-coming-up-list gap-2">
             <i className="bi bi-calendar-event"></i>
             <div className="">
-              <a href="#">Lecture</a>
+              <Link to={{}}>Lecture</Link>
               <br />
               CS4500.12631.202410
               <br />
@@ -73,7 +74,7 @@ function Home() {
           <div className="d-flex wd-coming-up-list gap-2">
             <i className="bi bi-calendar-event"></i>
             <div className="">
-              <a href="#">Lecture</a>
+              <Link to={{}}>Lecture</Link>
               <br />
               CS4550.12631.202410
               <br />
@@ -83,7 +84,7 @@ function Home() {
           <div className="d-flex wd-coming-up-list gap-2">
             <i className="bi bi-calendar-event"></i>
             <div className="">
-              <a href="#">Lecture</a>
+              <Link to={{}}>Lecture</Link>
               <br />
               CS5410 06 SP23
               <br />

@@ -13,15 +13,15 @@ function Modules() {
           View Progress
         </button>
         <span className="dropdown wd-btn">
-          <a
+          <Link
             className="dropdown-toggle"
-            href="#"
+            href="/"
             role="button"
             data-bs-toggle="dropdown"
             aria-expanded="false"
           >
             Publish All
-          </a>
+          </Link>
 
           <ul className="dropdown-menu wd-btn">
             <li>
@@ -30,12 +30,12 @@ function Modules() {
               </a>
             </li>
             <li>
-              <a className="dropdown-item" href="#">
+              <a className="dropdown-item" href="/">
                 Option 2
               </a>
             </li>
             <li>
-              <a className="dropdown-item" href="#">
+              <a className="dropdown-item" href="/">
                 Option 3
               </a>
             </li>
@@ -48,7 +48,7 @@ function Modules() {
         <span className="dropdown">
           <a
             className="wd-btn"
-            href="#"
+            href="/"
             role="button"
             data-bs-toggle="dropdown"
             aria-expanded="false"
@@ -58,7 +58,7 @@ function Modules() {
 
           <ul className="dropdown-menu">
             <li>
-              <a className="dropdown-item" href="#">
+              <a className="dropdown-item" href="/">
                 Dropdown
               </a>
             </li>
