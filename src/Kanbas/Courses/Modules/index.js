@@ -1,11 +1,8 @@
 import ModuleList from "./ModuleList";
-import { Link } from "react-router-dom";
 
 function Modules() {
   return (
     <div className="">
-      {/* <h2>Modules</h2> */}
-
       <div className="d-flex justify-content-end gap-1 pb-3">
         <button type="button" className="wd-btn">
           Collapse All
@@ -14,7 +11,7 @@ function Modules() {
           View Progress
         </button>
         <span className="dropdown wd-btn">
-          <Link
+          <a
             className="dropdown-toggle"
             href="/"
             role="button"
@@ -22,7 +19,7 @@ function Modules() {
             aria-expanded="false"
           >
             Publish All
-          </Link>
+          </a>
 
           <ul className="dropdown-menu wd-btn">
             <li>

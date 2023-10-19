@@ -2,6 +2,8 @@ import KanbasNavigation from "./KanbasNavigation";
 import { Routes, Route, Navigate } from "react-router";
 import Dashboard from "./Dashboard";
 import Courses from "./Courses";
+import "../index.css";
+import "bootstrap-icons/font/bootstrap-icons.css";
 
 function Kanbas() {
   return (

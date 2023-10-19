@@ -1,7 +1,5 @@
 import { Link } from "react-router-dom";
 import db from "../Database";
-import "bootstrap-icons/font/bootstrap-icons.css";
-import "../index.css";
 
 function Dashboard() {
   const courses = db.courses;

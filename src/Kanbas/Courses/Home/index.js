@@ -40,12 +40,12 @@ function Home() {
           </div>
         </div>
 
-        <div className="container wd-button-list gap-2">
+        <div className="container d-flex flex-column gap-1">
           {shortcutLabels.map((label, index) => (
-            <div key={index} className="d-flex wd-btn">
+            <button key={index} className="wd-btn w-100">
               {shortcutIcons.at(index)}
               {label}
-            </div>
+            </button>
           ))}
         </div>
 
