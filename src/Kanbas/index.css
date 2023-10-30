@@ -59,6 +59,10 @@ a:hover {
     text-decoration: none;
 }
 
+.wd-fit-content {
+    width: fit-content;
+}
+
 /* ------------------------------------------------------------------ */
 
 /* Kanbas Navigation */
