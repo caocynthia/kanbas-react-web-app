@@ -11,6 +11,7 @@ function Grades() {
   );
   return (
     <div>
+      GRADESSSS
       <div class="d-flex justify-content-end gap-2 mb-2">
         <button type="button" class="wd-btn">
           <i class="bi bi-file-earmark-arrow-up"></i>
@@ -50,7 +51,6 @@ function Grades() {
           <i class="p-1 bi bi-gear-fill"></i>
         </button>
       </div>
-
       <div class="d-flex flex-column flex-md-row gap-3 mt-3">
         <div class="container-fluid">
           <h4>Student Names</h4>
@@ -73,12 +73,10 @@ function Grades() {
           </div>
         </div>
       </div>
-
       <button class="mt-3 mb-3 wd-btn" type="button">
         <i class="bi bi-funnel"></i>
         Apply Filters
       </button>
-
       <div className="table-responsive">
         <table className="table table-bordered table-striped">
           <thead>
