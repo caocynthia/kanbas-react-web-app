@@ -10,7 +10,7 @@ function ModuleList() {
       {modules
         .filter((module) => module.course === courseId)
         .map((module, index) => (
-          <div key={index} className="list-group mb-4">
+          <div key={index} className="list-group mb-2">
             <div className="list-group-item">
               <h3>{module.name}</h3>
               <p>{module.description}</p>
