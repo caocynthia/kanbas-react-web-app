@@ -1,6 +1,5 @@
 import { useParams } from "react-router";
 import CourseNavigation from "./CourseNavigation";
-import db from "../Database";
 import { Link, Routes, Route, useLocation } from "react-router-dom";
 import Modules from "./Modules";
 import Home from "./Home";
@@ -8,9 +7,9 @@ import Assignments from "./Assignments";
 import AssignmentEditor from "./Assignments/AssignmentsEditor";
 import Grades from "./Grades";
 
-function Courses() {
+function Courses({ courses }) {
   const { courseId } = useParams();
-  const course = db.courses.find((course) => course._id === courseId);
+  const course = courses.find((course) => course._id === courseId);
   const removePath = "/Kanbas/Courses/" + courseId + "/";
   const path = useLocation().pathname.toString().replace(removePath, "");
   return (
