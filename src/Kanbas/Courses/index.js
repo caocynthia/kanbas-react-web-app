@@ -1,17 +1,20 @@
 import { useParams } from "react-router";
 import CourseNavigation from "./CourseNavigation";
-import { Link, Routes, Route, useLocation } from "react-router-dom";
+import { Link, Routes, Route } from "react-router-dom";
 import Modules from "./Modules";
 import Home from "./Home";
 import Assignments from "./Assignments";
 import AssignmentEditor from "./Assignments/AssignmentsEditor";
 import Grades from "./Grades";
+import { useMatch } from "react-router-dom";
 
 function Courses({ courses }) {
   const { courseId } = useParams();
   const course = courses.find((course) => course._id === courseId);
-  const removePath = "/Kanbas/Courses/" + courseId + "/";
-  const path = useLocation().pathname.toString().replace(removePath, "");
+
+  const match = useMatch("/:Kanbas/:Courses/:courseID/:page/*");
+  const path = match.params["page"];
+
   return (
     <div>
       <div className="d-none d-lg-flex wd-top-bar align-items-center justify-content-between">

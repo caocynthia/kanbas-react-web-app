@@ -64,6 +64,7 @@ function Modules() {
         </span>
       </div>
 
+      <hr />
       <ModuleList />
     </div>
   );

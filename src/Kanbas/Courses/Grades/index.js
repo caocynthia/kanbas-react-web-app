@@ -11,7 +11,6 @@ function Grades() {
   );
   return (
     <div>
-      GRADESSSS
       <div class="d-flex justify-content-end gap-2 mb-2">
         <button type="button" class="wd-btn">
           <i class="bi bi-file-earmark-arrow-up"></i>

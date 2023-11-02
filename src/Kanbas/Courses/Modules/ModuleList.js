@@ -16,8 +16,8 @@ function ModuleList() {
 
   return (
     <div className="wd-modules">
-      <div className="d-flex flex-row gap-2 mb-2">
-        <div className="d-flex flex-column col-10 gap-2">
+      <div className="d-flex flex-column gap-2 mb-2">
+        <div className="container d-flex flex-column gap-2">
           <input
             className="wd-input"
             value={module.name}
@@ -29,25 +29,26 @@ function ModuleList() {
             className="wd-input"
             value={module.description}
             onChange={(e) =>
-              dispatch(setModule({ ...module, name: e.target.value }))
+              dispatch(setModule({ ...module, description: e.target.value }))
             }
           />
         </div>
-        <button
-          className="wd-btn wd-btn-red wd-fit-content"
-          onClick={() =>
-            dispatch(updateModule({ ...module, course: courseId }))
-          }
-        >
-          Update
-        </button>
-        <button
-          className="wd-btn wd-btn-red wd-fit-content"
-          onClick={() => dispatch(addModule({ ...module, course: courseId }))}
-        >
-          Add
-        </button>
+        <div className="d-flex justify-content-end gap-2">
+          <button
+            className="wd-btn wd-btn-red wd-fit-content"
+            onClick={() => dispatch(updateModule(module))}
+          >
+            Update
+          </button>
+          <button
+            className="wd-btn wd-btn-red wd-fit-content"
+            onClick={() => dispatch(addModule({ ...module, course: courseId }))}
+          >
+            Add
+          </button>
+        </div>
       </div>
+      <hr />
 
       {modules
         .filter((module) => module.course === courseId)
@@ -60,16 +61,14 @@ function ModuleList() {
                 <div className="d-flex gap-2">
                   <button
                     className="wd-btn"
-                    onClick={(event) => {
-                      setModule(module);
-                    }}
+                    onClick={() => dispatch(setModule(module))}
                   >
                     Edit
                   </button>
 
                   <button
                     className="wd-btn"
-                    onClick={() => deleteModule(module._id)}
+                    onClick={() => dispatch(deleteModule(module._id))}
                   >
                     Delete
                   </button>
