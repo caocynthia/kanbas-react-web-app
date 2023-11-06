@@ -18,7 +18,8 @@ function AssignmentEditor() {
   const dispatch = useDispatch();
 
   const handleSave = () => {
-    if (assignmentId.toString() === "AssignmentEditor") {
+    console.log(assignmentId);
+    if (assignmentId.toString() === "AddAssignment") {
       dispatch(addAssignment({ ...assignment, course: courseId }));
     } else {
       dispatch(updateAssignment({ ...assignment, course: courseId }));

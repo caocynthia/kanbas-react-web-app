@@ -4,8 +4,8 @@ import db from "../../Database";
 const initialState = {
   assignments: db.assignments,
   assignment: {
-    title: "",
-    description: "",
+    title: "New Assignment",
+    description: "New Assignment Description",
     dueDate: "",
     availableFromDate: "",
     availableUntilDate: "",

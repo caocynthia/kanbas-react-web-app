@@ -1,7 +1,11 @@
 import React, { useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-import { setAssignment, deleteAssignment } from "./assignmentsReducer";
+import {
+  setAssignment,
+  deleteAssignment,
+  addAssignment,
+} from "./assignmentsReducer";
 
 function Assignments() {
   const { courseId } = useParams();
@@ -11,7 +15,9 @@ function Assignments() {
   const courseAssignments = assignments.filter(
     (assignment) => assignment.course === courseId
   );
+
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const [id, setID] = useState("");
   const [isOpen, setIsOpen] = useState(false);
@@ -28,32 +34,38 @@ function Assignments() {
     <div>
       <h2>Assignments for course {courseId}</h2>
       <div className="pb-2">
-        <Link
-          key={new Date().getTime().toString()}
-          to={`/Kanbas/Courses/${courseId}/Assignments/AssignmentEditor`}
+        <div
           className="wd-btn wd-btn-red wd-fit-content"
+          onClick={() => {
+            navigate(`/Kanbas/Courses/${courseId}/Assignments/AddAssignment`);
+          }}
         >
           <i className="bi bi-plus-lg"></i>Assignment
-        </Link>
+        </div>
       </div>
 
       <div className="list-group">
-        {courseAssignments.map((assignment) => (
+        {courseAssignments.map((courseAssignment) => (
           <div
-            key={assignment._id}
+            key={courseAssignment._id}
             className="d-flex list-group-item align-items-center justify-content-between"
           >
-            <Link
-              to={`/Kanbas/Courses/${courseId}/Assignments/${assignment._id}`}
+            <div
+              to={`/Kanbas/Courses/${courseId}/Assignments/${courseAssignment._id}`}
               className="text-decoration-none"
-              handleClick={setAssignment(assignment)}
+              onClick={() => {
+                dispatch(setAssignment(courseAssignment));
+                navigate(
+                  `/Kanbas/Courses/${courseId}/Assignments/${courseAssignment._id}`
+                );
+              }}
             >
-              {assignment.title}
-            </Link>
+              {courseAssignment.title}
+            </div>
             <div className="d-flex gap-2">
               <button
                 className="wd-btn"
-                onClick={() => handleDelete(assignment._id)}
+                onClick={() => handleDelete(courseAssignment._id)}
               >
                 Delete
               </button>
