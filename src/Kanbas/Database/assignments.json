@@ -1,11 +1,11 @@
 [
-  { "_id": "A101", "title": "Propulsion Assignment", "description": "This is an assignment that covers the following material ...", "course": "RS101" },
-  { "_id": "A102", "title": "Combustion Analysis", "description": "This is an assignment that covers the following material ...", "course": "RS101" },
-  { "_id": "A103", "title": "Nozzle Design Project", "description": "This is an assignment that covers the following material ...", "course": "RS101" },
-  { "_id": "A201", "title": "Aerodynamics Quiz", "description": "This is an assignment that covers the following material ...", "course": "RS102" },
-  { "_id": "A202", "title": "Flow Analysis", "description": "This is an assignment that covers the following material ...", "course": "RS102" },
-  { "_id": "A203", "title": "Heating Analysis", "description": "This is an assignment that covers the following material ...","course": "RS102" },
-  { "_id": "A301", "title": "Structural Design Task", "description": "This is an assignment that covers the following material ...", "course": "RS103" },
-  { "_id": "A302", "title": "Orbital Calculations", "description": "This is an assignment that covers the following material ...", "course": "RS103" },
-  { "_id": "A303", "title": "Systems Engineering Exam", "description": "This is an assignment that covers the following material ...", "course": "RS103" }
+  { "_id": "A101", "title": "Propulsion Assignment", "description": "This is an assignment that covers the following material ...", "dueDate": "2023-11-01", "course": "RS101" },
+  { "_id": "A102", "title": "Combustion Analysis", "description": "This is an assignment that covers the following material ...", "dueDate": "2023-11-01", "course": "RS101" },
+  { "_id": "A103", "title": "Nozzle Design Project", "description": "This is an assignment that covers the following material ...", "dueDate": "2023-11-01", "course": "RS101" },
+  { "_id": "A201", "title": "Aerodynamics Quiz", "description": "This is an assignment that covers the following material ...", "dueDate": "2023-11-01", "course": "RS102" },
+  { "_id": "A202", "title": "Flow Analysis", "description": "This is an assignment that covers the following material ...", "dueDate": "2023-11-01", "course": "RS102" },
+  { "_id": "A203", "title": "Heating Analysis", "description": "This is an assignment that covers the following material ...", "dueDate": "2023-11-01", "course": "RS102" },
+  { "_id": "A301", "title": "Structural Design Task", "description": "This is an assignment that covers the following material ...", "dueDate": "2023-11-01", "course": "RS103" },
+  { "_id": "A302", "title": "Orbital Calculations", "description": "This is an assignment that covers the following material ...", "dueDate": "2023-11-01", "course": "RS103" },
+  { "_id": "A303", "title": "Systems Engineering Exam", "description": "This is an assignment that covers the following material ...", "dueDate": "2023-11-01", "course": "RS103" }
 ]
