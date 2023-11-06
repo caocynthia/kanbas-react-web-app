@@ -1,11 +1,7 @@
 import React, { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-import {
-  setAssignment,
-  deleteAssignment,
-  addAssignment,
-} from "./assignmentsReducer";
+import { setAssignment, deleteAssignment } from "./assignmentsReducer";
 
 function Assignments() {
   const { courseId } = useParams();
@@ -50,19 +46,26 @@ function Assignments() {
             key={courseAssignment._id}
             className="d-flex list-group-item align-items-center justify-content-between"
           >
-            <div
-              to={`/Kanbas/Courses/${courseId}/Assignments/${courseAssignment._id}`}
-              className="text-decoration-none"
-              onClick={() => {
-                dispatch(setAssignment(courseAssignment));
-                navigate(
-                  `/Kanbas/Courses/${courseId}/Assignments/${courseAssignment._id}`
-                );
-              }}
-            >
-              {courseAssignment.title}
+            <div>
+              <div
+                to={`/Kanbas/Courses/${courseId}/Assignments/${courseAssignment._id}`}
+                className="text-decoration-none"
+                onClick={() => {
+                  dispatch(setAssignment(courseAssignment));
+                  navigate(
+                    `/Kanbas/Courses/${courseId}/Assignments/${courseAssignment._id}`
+                  );
+                }}
+              >
+                {courseAssignment.title}
+              </div>
+              <div class="wd-assignment-description pt-1">
+                Due date: {courseAssignment.dueDate}
+              </div>
             </div>
-            <div className="d-flex gap-2">
+
+            <div className="d-flex align-items-center gap-2">
+              <i class="bi bi-check-circle-fill text-success"></i>
               <button
                 className="wd-btn"
                 onClick={() => handleDelete(courseAssignment._id)}
