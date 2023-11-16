@@ -9,7 +9,7 @@ import { Provider } from "react-redux";
 function Labs() {
   return (
     <Provider store={store}>
-      <div className="container">
+      <div className="container labs">
         <h1>Welcome to Webdev</h1>
         <div>
           <h2>

@@ -21,13 +21,13 @@ function EncodingParametersInURLs() {
       <h3>Query Parameters</h3>
       <a
         href={`http://localhost:4000/a5/calculator?a=${a}&b=${b}&operation=add`}
-        className="btn btn-primary"
+        className="btn btn-light"
       >
         Add {a} + {b}
       </a>
       <a
         href={`http://localhost:4000/a5/calculator?a=${a}&b=${b}&operation=subtract`}
-        className="btn btn-danger"
+        className="btn btn-dark"
       >
         Substract {a} - {b}
       </a>
@@ -35,13 +35,13 @@ function EncodingParametersInURLs() {
       <h3>Path Parameters</h3>
       <a
         href={`http://localhost:4000/a5/add/${a}/${b}`}
-        className="btn btn-primary"
+        className="btn btn-light"
       >
         Add {a} + {b}
       </a>
       <a
         href={`http://localhost:4000/a5/subtract/${a}/${b}`}
-        className="btn btn-danger"
+        className="btn btn-dark"
       >
         Substract {a} - {b}
       </a>

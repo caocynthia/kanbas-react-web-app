@@ -16,7 +16,7 @@ function WorkingWithObjects() {
       <h4>Modifying Properties</h4>
       <a
         href={`${URL}/title/${assignment.title}`}
-        className="btn btn-primary me-2 float-end"
+        className="btn btn-light me-2 float-end"
       >
         Update Title
       </a>
@@ -32,7 +32,7 @@ function WorkingWithObjects() {
       <h4>Retrieving Objects</h4>
       <a
         href="http://localhost:4000/a5/assignment"
-        className="btn btn-primary me-2"
+        className="btn btn-light me-2"
       >
         Get Assignment
       </a>
