@@ -1,4 +1,4 @@
-import { React } from "react";
+import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import {
@@ -6,10 +6,35 @@ import {
   deleteModule,
   updateModule,
   setModule,
+  setModules,
 } from "./modulesReducer";
+import * as client from "./client";
 
 function ModuleList() {
   const { courseId } = useParams();
+  useEffect(() => {
+    client
+      .findModulesForCourse(courseId)
+      .then((modules) => dispatch(setModules(modules)));
+  }, [courseId]);
+
+  const handleAddModule = () => {
+    client.createModule(courseId, module).then((module) => {
+      dispatch(addModule(module));
+    });
+  };
+
+  const handleDeleteModule = (moduleId) => {
+    client.deleteModule(moduleId).then((status) => {
+      dispatch(deleteModule(moduleId));
+    });
+  };
+
+  const handleUpdateModule = async () => {
+    const status = await client.updateModule(module);
+    dispatch(updateModule(module));
+  };
+
   const modules = useSelector((state) => state.modulesReducer.modules);
   const module = useSelector((state) => state.modulesReducer.module);
   const dispatch = useDispatch();
@@ -36,13 +61,13 @@ function ModuleList() {
         <div className="d-flex justify-content-end gap-2">
           <button
             className="wd-btn wd-btn-red wd-fit-content"
-            onClick={() => dispatch(updateModule(module))}
+            onClick={handleUpdateModule}
           >
             Update
           </button>
           <button
             className="wd-btn wd-btn-red wd-fit-content"
-            onClick={() => dispatch(addModule({ ...module, course: courseId }))}
+            onClick={handleAddModule}
           >
             Add
           </button>
@@ -68,7 +93,7 @@ function ModuleList() {
 
                   <button
                     className="wd-btn"
-                    onClick={() => dispatch(deleteModule(module._id))}
+                    onClick={handleDeleteModule(module._id)}
                   >
                     Delete
                   </button>
