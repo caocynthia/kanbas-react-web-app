@@ -9,9 +9,6 @@ const modulesSlice = createSlice({
   name: "modules",
   initialState,
   reducers: {
-    setModules: (state, action) => {
-      state.modules = action.payload;
-    },
     addModule: (state, action) => {
       state.modules = [action.payload, ...state.modules];
     },
@@ -31,6 +28,9 @@ const modulesSlice = createSlice({
     },
     setModule: (state, action) => {
       state.module = action.payload;
+    },
+    setModules: (state, action) => {
+      state.modules = action.payload;
     },
   },
 });
