@@ -16,11 +16,11 @@ function ModuleList() {
   const module = useSelector((state) => state.modulesReducer.module);
   const dispatch = useDispatch();
 
-  const dispatchSetModules = (modules) => dispatch(setModules(modules));
-
   useEffect(() => {
-    client.findModulesForCourse(courseId).then(dispatchSetModules);
-  }, [courseId]);
+    client
+      .findModulesForCourse(courseId)
+      .then((modules) => dispatch(setModules(modules)));
+  }, [courseId, dispatch]);
 
   const handleAddModule = () => {
     client.createModule(courseId, module).then((module) => {
