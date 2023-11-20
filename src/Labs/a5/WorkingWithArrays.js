@@ -27,15 +27,10 @@ function WorkingWithArrays() {
     setTodo(response.data);
   };
 
-  //   const removeTodo = async (todo) => {
-  //     const response = await axios.get(`${API}/${todo.id}/delete`);
+  //   const createTodo = async () => {
+  //     const response = await axios.get(`${API}/create`);
   //     setTodos(response.data);
   //   };
-
-  const createTodo = async () => {
-    const response = await axios.get(`${API}/create`);
-    setTodos(response.data);
-  };
 
   const postTodo = async () => {
     const response = await axios.post(API, todo);
@@ -59,6 +54,7 @@ function WorkingWithArrays() {
       <a href={API} className="btn btn-light me-2">
         Get Todos
       </a>
+
       <h4>Retrieving an Item from an Array by ID</h4>
       <input
         className="form-control"
@@ -68,6 +64,7 @@ function WorkingWithArrays() {
       <a href={`${API}/${todo.id}`} className="btn btn-light me-2">
         Get Todo by ID
       </a>
+
       <h3>Filtering Array Items</h3>
       <a href={`${API}?completed=true`} className="btn btn-light me-2">
         Get Completed Todos
@@ -113,8 +110,13 @@ function WorkingWithArrays() {
         />
         Completed
       </label>
-      <button onClick={postTodo}>Post Todo</button>
-      <button onClick={createTodo} className="btn btn-primary mb-2 w-100">
+      <button onClick={postTodo} className="btn btn-light">
+        Post Todo
+      </button>
+      <button
+        //   onClick={createTodo}
+        className="btn btn-primary mb-2 w-100"
+      >
         Create Todo
       </button>
       <button onClick={updateTitle} className="btn btn-success mb-2 w-100">
