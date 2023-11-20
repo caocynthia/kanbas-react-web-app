@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import {
@@ -12,6 +12,10 @@ import * as client from "./client";
 
 function ModuleList() {
   const { courseId } = useParams();
+  const modules = useSelector((state) => state.modulesReducer.modules);
+  const module = useSelector((state) => state.modulesReducer.module);
+  const dispatch = useDispatch();
+
   useEffect(() => {
     client
       .findModulesForCourse(courseId)
@@ -25,19 +29,13 @@ function ModuleList() {
   };
 
   const handleDeleteModule = (moduleId) => {
-    client.deleteModule(moduleId).then((status) => {
-      dispatch(deleteModule(moduleId));
-    });
+    client.deleteModule(moduleId).then(dispatch(deleteModule(moduleId)));
   };
 
   const handleUpdateModule = async () => {
-    const status = await client.updateModule(module);
+    await client.updateModule(module);
     dispatch(updateModule(module));
   };
-
-  const modules = useSelector((state) => state.modulesReducer.modules);
-  const module = useSelector((state) => state.modulesReducer.module);
-  const dispatch = useDispatch();
 
   return (
     <div className="wd-modules">

@@ -30,7 +30,7 @@ function Kanbas() {
   }, []);
 
   const updateCourse = async (course) => {
-    const response = await axios.put(`${URL}/${course._id}`, course);
+    await axios.put(`${URL}/${course._id}`, course);
     setCourses(
       courses.map((c) => {
         if (c._id === course._id) {
