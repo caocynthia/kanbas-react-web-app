@@ -76,39 +76,30 @@ function ModuleList() {
       </div>
       <hr />
 
-      <div>
-        TESTING
-        {console.log()}
+      <ul className="list-group">
         {modules
           .filter((module) => module.course === courseId)
           .map((module, index) => (
-            <div key={index} className="list-group mb-2">
-              <div className="list-group-item">
-                <div className="d-flex justify-content-between">
-                  <h3>{module.name}</h3>
+            <li key={index} className="list-group-item">
+              <button
+                className="wd-btn"
+                onClick={() => dispatch(setModule(module))}
+              >
+                Edit
+              </button>
 
-                  <div className="d-flex gap-2">
-                    <button
-                      className="wd-btn"
-                      onClick={() => dispatch(setModule(module))}
-                    >
-                      Edit
-                    </button>
+              <button
+                className="wd-btn"
+                onClick={handleDeleteModule(module._id)}
+              >
+                Delete
+              </button>
 
-                    <button
-                      className="wd-btn"
-                      onClick={handleDeleteModule(module._id)}
-                    >
-                      Delete
-                    </button>
-                  </div>
-                </div>
-
-                <p>{module.description}</p>
-              </div>
-            </div>
+              <h3>{module.name}</h3>
+              <p>{module.description}</p>
+            </li>
           ))}
-      </div>
+      </ul>
     </div>
   );
 }
