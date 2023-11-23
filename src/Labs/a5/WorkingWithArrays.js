@@ -88,7 +88,10 @@ function WorkingWithArrays() {
       </a>
 
       <h3>Filtering Array Items</h3>
-      <a href={`${API}?completed=true`} className="btn btn-light me-2">
+      <a
+        href={`${API}/${todo.id}?completed=true`}
+        className="btn btn-light me-2"
+      >
         Get Completed Todos
       </a>
 
@@ -135,7 +138,9 @@ function WorkingWithArrays() {
       <button onClick={postTodo} className="btn btn-light">
         Post Todo
       </button>
-      <button onClick={updateTodo}>Update Todo</button>
+      <button onClick={updateTodo} className="btn btn-light">
+        Update Todo
+      </button>
       <button
         //   onClick={createTodo}
         className="btn btn-primary mb-2 w-100"
