@@ -76,7 +76,32 @@ function ModuleList() {
       </div>
       <hr />
 
-      <ul className="list-group">
+      <ul className="list-group wd-list">
+        {modules
+          .filter((module) => module.course === courseId)
+          .map((module, index) => (
+            <li key={index} className="list-group-item">
+              <button
+                className="mx-2 wd-home-gray-btns float-end"
+                onClick={() => dispatch(setModule(module))}
+              >
+                Edit
+              </button>
+
+              <button
+                className="wd-add-module-btn float-end"
+                onClick={() => handleDeleteModule(module._id)}
+              >
+                Delete{" "}
+              </button>
+
+              {module.name}
+              <p>{module.description}</p>
+            </li>
+          ))}
+      </ul>
+
+      {/* <ul className="list-group">
         {modules
           .filter((module) => module.course === courseId)
           .map((module, index) => (
@@ -99,7 +124,7 @@ function ModuleList() {
               <p>{module.description}</p>
             </li>
           ))}
-      </ul>
+      </ul> */}
     </div>
   );
 }
