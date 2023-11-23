@@ -81,50 +81,27 @@ function ModuleList() {
           .filter((module) => module.course === courseId)
           .map((module, index) => (
             <li key={index} className="list-group-item">
-              <button
-                className="mx-2 wd-home-gray-btns float-end"
-                onClick={() => dispatch(setModule(module))}
-              >
-                Edit
-              </button>
+              <div className="float-end d-flex gap-2">
+                <button
+                  className="wd-btn"
+                  onClick={() => dispatch(setModule(module))}
+                >
+                  Edit
+                </button>
 
-              <button
-                className="wd-add-module-btn float-end"
-                onClick={() => handleDeleteModule(module._id)}
-              >
-                Delete{" "}
-              </button>
-
-              {module.name}
-              <p>{module.description}</p>
-            </li>
-          ))}
-      </ul>
-
-      {/* <ul className="list-group">
-        {modules
-          .filter((module) => module.course === courseId)
-          .map((module, index) => (
-            <li key={index} className="list-group-item">
-              <button
-                className="wd-btn"
-                onClick={() => dispatch(setModule(module))}
-              >
-                Edit
-              </button>
-
-              <button
-                className="wd-btn"
-                onClick={handleDeleteModule(module._id)}
-              >
-                Delete
-              </button>
+                <button
+                  className="wd-btn"
+                  onClick={() => handleDeleteModule(module._id)}
+                >
+                  Delete
+                </button>
+              </div>
 
               <h3>{module.name}</h3>
               <p>{module.description}</p>
             </li>
           ))}
-      </ul> */}
+      </ul>
     </div>
   );
 }
