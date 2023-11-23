@@ -8,22 +8,21 @@ import {
   setModule,
   setModules,
 } from "./modulesReducer";
+import { findModulesForCourse, createModule } from "./client";
 import * as client from "./client";
 
 function ModuleList() {
   const { courseId } = useParams();
-  const modules = useSelector((state) => state.modulesReducer.modules);
-  const module = useSelector((state) => state.modulesReducer.module);
   const dispatch = useDispatch();
 
   useEffect(() => {
-    client
-      .findModulesForCourse(courseId)
-      .then((modules) => dispatch(setModules(modules)));
+    findModulesForCourse(courseId).then((modules) =>
+      dispatch(setModules(modules))
+    );
   }, [courseId, dispatch]);
 
   const handleAddModule = () => {
-    client.createModule(courseId, module).then((module) => {
+    createModule(courseId, module).then((module) => {
       dispatch(addModule(module));
     });
   };
@@ -37,6 +36,9 @@ function ModuleList() {
     dispatch(updateModule(module));
   };
 
+  const modules = useSelector((state) => state.modulesReducer.modules);
+  const module = useSelector((state) => state.modulesReducer.module);
+
   return (
     <div className="wd-modules">
       <div className="d-flex flex-column gap-2 mb-2">
@@ -48,6 +50,7 @@ function ModuleList() {
               dispatch(setModule({ ...module, name: e.target.value }))
             }
           />
+
           <textarea
             className="wd-input"
             value={module.description}
@@ -73,35 +76,39 @@ function ModuleList() {
       </div>
       <hr />
 
-      {modules
-        .filter((module) => module.course === courseId)
-        .map((module, index) => (
-          <div key={index} className="list-group mb-2">
-            <div className="list-group-item">
-              <div className="d-flex justify-content-between">
-                <h3>{module.name}</h3>
+      <div>
+        TESTING
+        {console.log()}
+        {modules
+          .filter((module) => module.course === courseId)
+          .map((module, index) => (
+            <div key={index} className="list-group mb-2">
+              <div className="list-group-item">
+                <div className="d-flex justify-content-between">
+                  <h3>{module.name}</h3>
 
-                <div className="d-flex gap-2">
-                  <button
-                    className="wd-btn"
-                    onClick={() => dispatch(setModule(module))}
-                  >
-                    Edit
-                  </button>
+                  <div className="d-flex gap-2">
+                    <button
+                      className="wd-btn"
+                      onClick={() => dispatch(setModule(module))}
+                    >
+                      Edit
+                    </button>
 
-                  <button
-                    className="wd-btn"
-                    onClick={handleDeleteModule(module._id)}
-                  >
-                    Delete
-                  </button>
+                    <button
+                      className="wd-btn"
+                      onClick={handleDeleteModule(module._id)}
+                    >
+                      Delete
+                    </button>
+                  </div>
                 </div>
-              </div>
 
-              <p>{module.description}</p>
+                <p>{module.description}</p>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+      </div>
     </div>
   );
 }

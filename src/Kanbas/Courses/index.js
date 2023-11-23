@@ -12,17 +12,23 @@ import axios from "axios";
 
 function Courses() {
   const { courseId } = useParams();
-  const URL = "http://localhost:4000/api/courses";
+
+  const API_BASE = process.env.REACT_APP_API_BASE;
+  const URL = `${API_BASE}/api/courses`;
 
   const [course, setCourse] = useState({});
-  const findCourseById = async (courseId) => {
-    const response = await axios.get(`${URL}/${courseId}`);
-    setCourse(response.data);
-  };
+  // const findCourseById = async (courseId) => {
+  //   const response = await axios.get(`${URL}/${courseId}`);
+  //   setCourse(response.data);
+  // };
 
   useEffect(() => {
+    const findCourseById = async (courseId) => {
+      const response = await axios.get(`${URL}/${courseId}`);
+      setCourse(response.data);
+    };
     findCourseById(courseId);
-  }, [courseId]);
+  }, [courseId, URL]);
 
   const match = useMatch("/:Kanbas/:Courses/:courseID/:page/*");
   const path = match.params["page"];

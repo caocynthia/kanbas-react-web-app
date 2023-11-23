@@ -39,10 +39,10 @@ function Modules() {
             </li>
           </ul>
         </span>
-        <button type="button" className="wd-btn wd-btn-red">
+        {/* <button type="button" className="wd-btn wd-btn-red">
           <i className="bi bi-plus-lg"></i>
           Module
-        </button>
+        </button> */}
         <span className="dropdown">
           <a
             className="wd-btn"
