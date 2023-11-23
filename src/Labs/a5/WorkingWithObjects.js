@@ -1,8 +1,8 @@
 import axios from "axios";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 function WorkingWithObjects() {
-  const API_BASE = process.env.REACT_APP_API_BASE;
+  const API_BASE = REACT_APP_API_BASE;
   const URL = `${API_BASE}/a5/assignment`;
 
   const [assignment, setAssignment] = useState({
@@ -19,23 +19,41 @@ function WorkingWithObjects() {
     setAssignment(response.data);
   };
 
+  const fetchAssignment = async () => {
+    const response = await axios.get(`${URL}`);
+    setAssignment(response.data);
+  };
+
+  useEffect(() => {
+    const fetchAssignment = async () => {
+      const response = await axios.get(`${URL}`);
+      setAssignment(response.data);
+    };
+    fetchAssignment();
+  }, [URL]);
+
   return (
     <div>
       <h3>Working With Objects</h3>
 
       <h4>Modifying Properties</h4>
-      <a
-        href={`${URL}/title/${assignment.title}`}
-        className="btn btn-light me-2 float-end"
-      >
-        Update Title
-      </a>
       <input
-        onChange={updateTitle}
+        onChange={(e) =>
+          setAssignment({
+            ...assignment,
+            title: e.target.value,
+          })
+        }
         value={assignment.title}
-        className="form-control mb-2 w-75"
+        className="form-control mb-2"
         type="text"
       />
+      <button onClick={updateTitle} className="w-100 btn btn-primary mb-2">
+        Update Title to: {assignment.title}
+      </button>
+      <button onClick={fetchAssignment} className="w-100 btn btn-danger mb-2">
+        Fetch Assignment
+      </button>
 
       <h4>Retrieving Objects</h4>
       <a href={URL} className="btn btn-light me-2">
