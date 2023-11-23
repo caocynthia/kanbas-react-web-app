@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 function WorkingWithArrays() {
-  const API = "http://localhost:4000/a5/todos";
+  // const API_BASE = process.env.REACT_APP_API_BASE;
+  const API_BASE = `http://localhost:4000/api`;
+  const URL = `${API_BASE}/a5/todos`;
 
   const [todo, setTodo] = useState({
     id: 1,
@@ -13,17 +15,17 @@ function WorkingWithArrays() {
 
   const [todos, setTodos] = useState([]);
 
-  const fetchTodos = async () => {
-    const response = await axios.get(API);
-    setTodos(response.data);
-  };
+  // const fetchTodos = async () => {
+  //   const response = await axios.get(URL);
+  //   setTodos(response.data);
+  // };
 
-  useEffect(() => {
-    fetchTodos();
-  }, []);
+  // useEffect(() => {
+  //   fetchTodos();
+  // }, []);
 
   const fetchTodoById = async (id) => {
-    const response = await axios.get(`${API}/${id}`);
+    const response = await axios.get(`${URL}/${id}`);
     setTodo(response.data);
   };
 
@@ -33,17 +35,17 @@ function WorkingWithArrays() {
   //   };
 
   const postTodo = async () => {
-    const response = await axios.post(API, todo);
+    const response = await axios.post(URL, todo);
     setTodos([...todos, response.data]);
   };
 
   const deleteTodo = async (todo) => {
-    await axios.delete(`${API}/${todo.id}`);
+    await axios.delete(`${URL}/${todo.id}`);
     setTodos(todos.filter((t) => t.id !== todo.id));
   };
 
   const updateTitle = async () => {
-    const response = await axios.get(`${API}/${todo.id}/title/${todo.title}`);
+    const response = await axios.get(`${URL}/${todo.id}/title/${todo.title}`);
     setTodos(response.data);
   };
 
@@ -51,7 +53,7 @@ function WorkingWithArrays() {
     <div>
       <h2>Working with Arrays</h2>
       <h4>Retrieving Arrays</h4>
-      <a href={API} className="btn btn-light me-2">
+      <a href={URL} className="btn btn-light me-2">
         Get Todos
       </a>
 
@@ -61,12 +63,12 @@ function WorkingWithArrays() {
         value={todo.id}
         onChange={(e) => setTodo({ ...todo, id: e.target.value })}
       />
-      <a href={`${API}/${todo.id}`} className="btn btn-light me-2">
+      <a href={`${URL}/${todo.id}`} className="btn btn-light me-2">
         Get Todo by ID
       </a>
 
       <h3>Filtering Array Items</h3>
-      <a href={`${API}?completed=true`} className="btn btn-light me-2">
+      <a href={`${URL}?completed=true`} className="btn btn-light me-2">
         Get Completed Todos
       </a>
 

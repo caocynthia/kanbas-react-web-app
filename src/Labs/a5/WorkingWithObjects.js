@@ -1,6 +1,11 @@
+import axios from "axios";
 import React, { useState } from "react";
+
 function WorkingWithObjects() {
-  const URL = "http://localhost:4000/a5/assignment";
+  const API_BASE = process.env.REACT_APP_API_BASE;
+  // const API_BASE = `http://localhost:4000/api`;
+  const URL = `${API_BASE}/a5/assignment`;
+
   const [assignment, setAssignment] = useState({
     id: 1,
     title: "NodeJS Assignment",
@@ -10,9 +15,15 @@ function WorkingWithObjects() {
     score: 0,
   });
 
+  const updateTitle = async () => {
+    const response = await axios.get(`${URL}/title/${assignment.title}`);
+    setAssignment(response.data);
+  };
+
   return (
     <div>
       <h3>Working With Objects</h3>
+
       <h4>Modifying Properties</h4>
       <a
         href={`${URL}/title/${assignment.title}`}
@@ -21,26 +32,18 @@ function WorkingWithObjects() {
         Update Title
       </a>
       <input
+        onChange={updateTitle}
+        value={assignment.title}
         className="form-control mb-2 w-75"
         type="text"
-        value={assignment.title}
-        onChange={(e) =>
-          setAssignment({ ...assignment, title: e.target.value })
-        }
       />
 
       <h4>Retrieving Objects</h4>
-      <a
-        href="http://localhost:4000/a5/assignment"
-        className="btn btn-light me-2"
-      >
+      <a href={URL} className="btn btn-light me-2">
         Get Assignment
       </a>
       <h4>Retrieving Properties</h4>
-      <a
-        href="http://localhost:4000/a5/assignment/title"
-        className="btn btn-light me-2"
-      >
+      <a href={`${URL}/title`} className="btn btn-light me-2">
         Get Title
       </a>
     </div>
