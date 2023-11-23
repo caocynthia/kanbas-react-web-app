@@ -88,10 +88,7 @@ function WorkingWithArrays() {
       </a>
 
       <h3>Filtering Array Items</h3>
-      <a
-        href={`${API}/${todo.id}?completed=true`}
-        className="btn btn-light me-2"
-      >
+      <a href={`${API}?completed=true`} className="btn btn-light me-2">
         Get Completed Todos
       </a>
 
