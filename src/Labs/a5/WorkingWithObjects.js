@@ -2,7 +2,7 @@ import axios from "axios";
 import React, { useState, useEffect } from "react";
 
 function WorkingWithObjects() {
-  const API_BASE = REACT_APP_API_BASE;
+  const API_BASE = process.env.REACT_APP_API_BASE;
   const URL = `${API_BASE}/a5/assignment`;
 
   const [assignment, setAssignment] = useState({
