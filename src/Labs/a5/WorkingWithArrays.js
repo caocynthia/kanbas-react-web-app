@@ -2,8 +2,9 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 function WorkingWithArrays() {
   const API_BASE = process.env.REACT_APP_API_BASE;
-  // const API_BASE = `http://localhost:4000/api`;
-  const URL = `${API_BASE}/a5/todos`;
+  const API = `${API_BASE}/a5/todos`;
+
+  const [errorMessage, setErrorMessage] = useState(null);
 
   const [todo, setTodo] = useState({
     id: 1,
@@ -17,42 +18,61 @@ function WorkingWithArrays() {
 
   useEffect(() => {
     const fetchTodos = async () => {
-      const response = await axios.get(URL);
+      const response = await axios.get(API);
       setTodos(response.data);
     };
     fetchTodos();
-  }, [URL]);
+  }, [API]);
 
   const fetchTodoById = async (id) => {
-    const response = await axios.get(`${URL}/${id}`);
+    const response = await axios.get(`${API}/${id}`);
     setTodo(response.data);
   };
 
-  //   const createTodo = async () => {
-  //     const response = await axios.get(`${API}/create`);
-  //     setTodos(response.data);
-  //   };
+  // const createTodo = async () => {
+  //   const response = await axios.get(`${API}/create`);
+  //   setTodos(response.data);
+  // };
 
   const postTodo = async () => {
-    const response = await axios.post(URL, todo);
+    const response = await axios.post(API, todo);
     setTodos([...todos, response.data]);
   };
 
   const deleteTodo = async (todo) => {
-    await axios.delete(`${URL}/${todo.id}`);
-    setTodos(todos.filter((t) => t.id !== todo.id));
+    try {
+      await axios.delete(`${API}/${todo.id}`);
+      setTodos(todos.filter((t) => t.id !== todo.id));
+    } catch (error) {
+      console.log(error);
+      setErrorMessage(error.response.data.message);
+    }
   };
 
   const updateTitle = async () => {
-    const response = await axios.get(`${URL}/${todo.id}/title/${todo.title}`);
+    const response = await axios.get(`${API}/${todo.id}/title/${todo.title}`);
     setTodos(response.data);
+  };
+
+  const updateTodo = async () => {
+    try {
+      await axios.put(`${API}/${todo.id}`, todo);
+      setTodos(todos.map((t) => (t.id === todo.id ? todo : t)));
+      setTodo({});
+    } catch (error) {
+      console.log(error);
+      setErrorMessage(error.response.data.message);
+    }
   };
 
   return (
     <div>
+      {errorMessage && (
+        <div className="alert alert-danger mb-2 mt-2">{errorMessage}</div>
+      )}
       <h2>Working with Arrays</h2>
       <h4>Retrieving Arrays</h4>
-      <a href={URL} className="btn btn-light me-2">
+      <a href={API} className="btn btn-light me-2">
         Get Todos
       </a>
 
@@ -62,12 +82,12 @@ function WorkingWithArrays() {
         value={todo.id}
         onChange={(e) => setTodo({ ...todo, id: e.target.value })}
       />
-      <a href={`${URL}/${todo.id}`} className="btn btn-light me-2">
+      <a href={`${API}/${todo.id}`} className="btn btn-light me-2">
         Get Todo by ID
       </a>
 
       <h3>Filtering Array Items</h3>
-      <a href={`${URL}?completed=true`} className="btn btn-light me-2">
+      <a href={`${API}?completed=true`} className="btn btn-light me-2">
         Get Completed Todos
       </a>
 
@@ -114,6 +134,7 @@ function WorkingWithArrays() {
       <button onClick={postTodo} className="btn btn-light">
         Post Todo
       </button>
+      <button onClick={updateTodo}>Update Todo</button>
       <button
         //   onClick={createTodo}
         className="btn btn-primary mb-2 w-100"

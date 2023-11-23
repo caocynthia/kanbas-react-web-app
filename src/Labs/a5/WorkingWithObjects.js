@@ -3,7 +3,6 @@ import React, { useState } from "react";
 
 function WorkingWithObjects() {
   const API_BASE = process.env.REACT_APP_API_BASE;
-  // const API_BASE = `http://localhost:4000/api`;
   const URL = `${API_BASE}/a5/assignment`;
 
   const [assignment, setAssignment] = useState({
