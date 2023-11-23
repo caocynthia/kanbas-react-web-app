@@ -15,14 +15,14 @@ function WorkingWithArrays() {
 
   const [todos, setTodos] = useState([]);
 
-  // const fetchTodos = async () => {
-  //   const response = await axios.get(URL);
-  //   setTodos(response.data);
-  // };
+  const fetchTodos = async () => {
+    const response = await axios.get(URL);
+    setTodos(response.data);
+  };
 
-  // useEffect(() => {
-  //   fetchTodos();
-  // }, []);
+  useEffect(() => {
+    fetchTodos();
+  }, []);
 
   const fetchTodoById = async (id) => {
     const response = await axios.get(`${URL}/${id}`);
