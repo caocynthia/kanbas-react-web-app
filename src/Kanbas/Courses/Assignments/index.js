@@ -42,10 +42,9 @@ function Assignments() {
       .then(dispatch(deleteAssignment(moduleId)));
   };
 
-  const confirmDelete = () => {
-    handleDeleteAssignment(id);
-    setIsOpen(false);
-  };
+  // const confirmDelete = () => {
+  //   handleDeleteAssignment(id);
+  // };
 
   return (
     <div>
@@ -105,7 +104,8 @@ function Assignments() {
             <button
               className="wd-btn"
               onClick={() => {
-                confirmDelete();
+                handleDeleteAssignment(id);
+                setIsOpen(false);
               }}
             >
               Yes
