@@ -36,10 +36,10 @@ function Assignments() {
     setID(id);
   };
 
-  const handleDeleteAssignment = (moduleId) => {
+  const handleDeleteAssignment = (assignmentId) => {
     client
-      .deleteAssignment(moduleId)
-      .then(dispatch(deleteAssignment(moduleId)));
+      .deleteAssignment(assignmentId)
+      .then(dispatch(deleteAssignment(assignmentId)));
   };
 
   // const confirmDelete = () => {
@@ -88,7 +88,7 @@ function Assignments() {
               <i className="bi bi-check-circle-fill text-success"></i>
               <button
                 className="wd-btn"
-                onClick={() => handleDelete(courseAssignment.id)}
+                onClick={() => handleDelete(courseAssignment._id)}
               >
                 Delete
               </button>
