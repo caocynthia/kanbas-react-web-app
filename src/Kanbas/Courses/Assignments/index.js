@@ -28,14 +28,15 @@ function Assignments() {
   };
 
   useEffect(() => {
-    findAssignmentsForCourse(courseId).then((modules) =>
-      dispatch(setAssignments(modules))
+    findAssignmentsForCourse(courseId).then((assignments) =>
+      dispatch(setAssignments(assignments))
     );
   }, [courseId, dispatch]);
 
   const assignments = useSelector(
     (state) => state.assignmentsReducer.assignments
   );
+
   const courseAssignments = assignments.filter(
     (assignment) => assignment.course === courseId
   );

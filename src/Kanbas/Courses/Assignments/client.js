@@ -26,6 +26,6 @@ export const createAssignment = async (courseId, assignment) => {
 };
 
 export const findAssignmentsForCourse = async (courseId) => {
-  const response = await axios.get(`${COURSES_URL}/${courseId}/modules`);
+  const response = await axios.get(`${COURSES_URL}/${courseId}/assignments`);
   return response.data;
 };
