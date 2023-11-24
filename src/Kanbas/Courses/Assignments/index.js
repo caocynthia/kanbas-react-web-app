@@ -1,7 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-import { setAssignment, deleteAssignment } from "./assignmentsReducer";
+import {
+  setAssignment,
+  deleteAssignment,
+  setAssignments,
+} from "./assignmentsReducer";
+import { findAssignmentsForCourse } from "./client";
+import * as client from "./client";
 
 function Assignments() {
   const { courseId } = useParams();
@@ -17,13 +23,27 @@ function Assignments() {
 
   const [id, setID] = useState("");
   const [isOpen, setIsOpen] = useState(false);
+
   const handleDelete = (id) => {
     setIsOpen(true);
     setID(id);
   };
+
   const confirmDelete = () => {
-    dispatch(deleteAssignment(id));
+    dispatch(handleDeleteAssignment(id));
     setIsOpen(false);
+  };
+
+  useEffect(() => {
+    findAssignmentsForCourse(courseId).then((modules) =>
+      dispatch(setAssignments(modules))
+    );
+  }, [courseId, dispatch]);
+
+  const handleDeleteAssignment = (moduleId) => {
+    client
+      .deleteAssignment(moduleId)
+      .then(dispatch(deleteAssignment(moduleId)));
   };
 
   return (
@@ -59,16 +79,16 @@ function Assignments() {
               >
                 {courseAssignment.title}
               </div>
-              <div class="wd-assignment-description pt-1">
+              <div className="wd-assignment-description pt-1">
                 Due date: {courseAssignment.dueDate}
               </div>
             </div>
 
             <div className="d-flex align-items-center gap-2">
-              <i class="bi bi-check-circle-fill text-success"></i>
+              <i className="bi bi-check-circle-fill text-success"></i>
               <button
                 className="wd-btn"
-                onClick={() => handleDelete(courseAssignment._id)}
+                onClick={() => handleDelete(courseAssignment.id)}
               >
                 Delete
               </button>

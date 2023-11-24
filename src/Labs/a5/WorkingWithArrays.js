@@ -79,7 +79,7 @@ function WorkingWithArrays() {
 
       <h4>Retrieving an Item from an Array by ID</h4>
       <input
-        className="form-control"
+        className="form-control wd-input"
         value={todo.id}
         onChange={(e) => setTodo({ ...todo, id: e.target.value })}
       />
@@ -93,51 +93,57 @@ function WorkingWithArrays() {
       </a>
 
       <h2>Working with Arrays</h2>
-      <input value={todo.id} readOnly />
-      <input
-        onChange={(e) =>
-          setTodo({
-            ...todo,
-            title: e.target.value,
-          })
-        }
-        value={todo.title}
-        type="text"
-      />
-      <textarea
-        onChange={(e) => setTodo({ ...todo, description: e.target.value })}
-        value={todo.description}
-        type="text"
-      />
-      <input
-        onChange={(e) =>
-          setTodo({
-            ...todo,
-            due: e.target.value,
-          })
-        }
-        value={todo.due}
-        type="date"
-      />
-      <label>
+      <div className="d-flex flex-column gap-2 mb-2">
+        <input className="wd-input" value={todo.id} readOnly />
         <input
+          className="wd-input"
           onChange={(e) =>
             setTodo({
               ...todo,
-              completed: e.target.checked,
+              title: e.target.value,
             })
           }
-          value={todo.completed}
-          type="checkbox"
+          value={todo.title}
+          type="text"
         />
-        Completed
-      </label>
-      <button onClick={postTodo} className="btn btn-light">
-        Post Todo
-      </button>
-      <button onClick={updateTodo} className="btn btn-light">
-        Update Todo
-      </button>
+        <textarea
+          className="wd-input"
+          onChange={(e) => setTodo({ ...todo, description: e.target.value })}
+          value={todo.description}
+          type="text"
+        />
+        <input
+          className="wd-input"
+          onChange={(e) =>
+            setTodo({
+              ...todo,
+              due: e.target.value,
+            })
+          }
+          value={todo.due}
+          type="date"
+        />
+        <label>
+          <input
+            onChange={(e) =>
+              setTodo({
+                ...todo,
+                completed: e.target.checked,
+              })
+            }
+            value={todo.completed}
+            type="checkbox"
+          />
+          Completed
+        </label>
+
+        <button onClick={postTodo} className="btn btn-light">
+          Post Todo
+        </button>
+        <button onClick={updateTodo} className="btn btn-light">
+          Update Todo
+        </button>
+      </div>
       <button
         //   onClick={createTodo}
         className="btn btn-primary mb-2 w-100"

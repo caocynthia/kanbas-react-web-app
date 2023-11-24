@@ -6,6 +6,8 @@ import {
   updateAssignment,
 } from "../assignmentsReducer";
 import { useSelector, useDispatch } from "react-redux";
+import { createAssignment } from "../client";
+import * as client from "../client";
 
 function AssignmentEditor() {
   const assignment = useSelector(
@@ -17,14 +19,23 @@ function AssignmentEditor() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
+  const handleAddAssignment = () => {
+    createAssignment(courseId, module).then((module) => {
+      dispatch(addAssignment(module));
+    });
+  };
+
+  const handleUpdateAssignment = async () => {
+    await client.updateAssignment(module);
+    dispatch(updateAssignment(module));
+  };
+
   const handleSave = () => {
-    console.log(assignmentId);
     if (assignmentId.toString() === "AddAssignment") {
-      dispatch(addAssignment({ ...assignment, course: courseId }));
+      handleAddAssignment();
     } else {
-      dispatch(updateAssignment({ ...assignment, course: courseId }));
+      handleUpdateAssignment();
     }
-    navigate(`/Kanbas/Courses/${courseId}/Assignments`);
   };
 
   return (
@@ -106,7 +117,13 @@ function AssignmentEditor() {
         >
           Cancel
         </Link>
-        <button onClick={handleSave} className="wd-btn wd-btn-red me-2">
+        <button
+          onClick={() => {
+            handleSave();
+            navigate(`/Kanbas/Courses/${courseId}/Assignments`);
+          }}
+          className="wd-btn wd-btn-red me-2"
+        >
           Save
         </button>
       </div>
