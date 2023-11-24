@@ -9,9 +9,7 @@ export const fetchCourses = async () => {
 };
 
 export const deleteCourse = async (courseId) => {
-  const response = await axios.delete(
-    `http://localhost:4000/api/courses/${courseId}`
-  );
+  const response = await axios.delete(`${COURSES_URL}/${courseId}`);
   return response.data;
 };
 

@@ -11,13 +11,6 @@ import * as client from "./client";
 
 function Assignments() {
   const { courseId } = useParams();
-  const assignments = useSelector(
-    (state) => state.assignmentsReducer.assignments
-  );
-  const courseAssignments = assignments.filter(
-    (assignment) => assignment.course === courseId
-  );
-
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -39,6 +32,13 @@ function Assignments() {
       dispatch(setAssignments(modules))
     );
   }, [courseId, dispatch]);
+
+  const assignments = useSelector(
+    (state) => state.assignmentsReducer.assignments
+  );
+  const courseAssignments = assignments.filter(
+    (assignment) => assignment.course === courseId
+  );
 
   const handleDeleteAssignment = (moduleId) => {
     client
@@ -77,6 +77,7 @@ function Assignments() {
                   );
                 }}
               >
+                {console.log(courseAssignment)}
                 {courseAssignment.title}
               </div>
               <div className="wd-assignment-description pt-1">

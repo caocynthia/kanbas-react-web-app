@@ -62,13 +62,13 @@ function ModuleList() {
         <div className="d-flex justify-content-end gap-2">
           <button
             className="wd-btn wd-btn-red wd-fit-content"
-            onClick={handleUpdateModule}
+            onClick={() => handleUpdateModule}
           >
             Update
           </button>
           <button
             className="wd-btn wd-btn-red wd-fit-content"
-            onClick={handleAddModule}
+            onClick={() => handleAddModule}
           >
             Add
           </button>
