@@ -17,16 +17,6 @@ function Assignments() {
   const [id, setID] = useState("");
   const [isOpen, setIsOpen] = useState(false);
 
-  const handleDelete = (id) => {
-    setIsOpen(true);
-    setID(id);
-  };
-
-  const confirmDelete = () => {
-    dispatch(handleDeleteAssignment(id));
-    setIsOpen(false);
-  };
-
   useEffect(() => {
     findAssignmentsForCourse(courseId).then((assignments) =>
       dispatch(setAssignments(assignments))
@@ -41,10 +31,20 @@ function Assignments() {
     (assignment) => assignment.course === courseId
   );
 
+  const handleDelete = (id) => {
+    setIsOpen(true);
+    setID(id);
+  };
+
   const handleDeleteAssignment = (moduleId) => {
     client
       .deleteAssignment(moduleId)
       .then(dispatch(deleteAssignment(moduleId)));
+  };
+
+  const confirmDelete = () => {
+    handleDeleteAssignment(id);
+    setIsOpen(false);
   };
 
   return (
@@ -78,7 +78,6 @@ function Assignments() {
                   );
                 }}
               >
-                {console.log(courseAssignment)}
                 {courseAssignment.title}
               </div>
               <div className="wd-assignment-description pt-1">
@@ -103,7 +102,12 @@ function Assignments() {
         <div className="wd-popup d-flex flex-column gap-4">
           <div>Are you sure you want to delete this assignment?</div>
           <div className="d-flex gap-2">
-            <button className="wd-btn" onClick={() => confirmDelete()}>
+            <button
+              className="wd-btn"
+              onClick={() => {
+                confirmDelete();
+              }}
+            >
               Yes
             </button>
             <button className="wd-btn" onClick={() => setIsOpen(false)}>

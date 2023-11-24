@@ -20,14 +20,14 @@ function AssignmentEditor() {
   const dispatch = useDispatch();
 
   const handleAddAssignment = () => {
-    createAssignment(courseId, module).then((module) => {
-      dispatch(addAssignment(module));
+    createAssignment(courseId, assignment).then((assignment) => {
+      dispatch(addAssignment(assignment));
     });
   };
 
   const handleUpdateAssignment = async () => {
-    await client.updateAssignment(module);
-    dispatch(updateAssignment(module));
+    await client.updateAssignment(assignment);
+    dispatch(updateAssignment(assignment));
   };
 
   const handleSave = () => {
