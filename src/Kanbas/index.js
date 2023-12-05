@@ -8,6 +8,7 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 import { useState, useEffect } from "react";
 import store from "./store";
 import { Provider } from "react-redux";
+// import Signin from "../users/signin";
 
 function Kanbas() {
   const [courses, setCourses] = useState([]);
@@ -86,6 +87,7 @@ function Kanbas() {
               path="Courses/:courseId/*"
               element={<Courses courses={courses} />}
             />
+            {/* <Route path="/signin" element={<Signin />} /> */}
           </Routes>
         </div>
       </div>
