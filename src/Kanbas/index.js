@@ -8,7 +8,7 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 import { useState, useEffect } from "react";
 import store from "./store";
 import { Provider } from "react-redux";
-// import Signin from "../users/signin";
+import AccountPage from "./Account";
 
 function Kanbas() {
   const [courses, setCourses] = useState([]);
@@ -63,14 +63,6 @@ function Kanbas() {
           <Routes>
             <Route path="/" element={<Navigate to="Dashboard" />} />
             <Route
-              path="Account"
-              element={
-                <div className="wd-top-bar">
-                  <h1>Account</h1>
-                </div>
-              }
-            />
-            <Route
               path="Dashboard"
               element={
                 <Dashboard
@@ -87,8 +79,7 @@ function Kanbas() {
               path="Courses/:courseId/*"
               element={<Courses courses={courses} />}
             />
-            {/* <Route path="/signin" element={<Signin />} /> */}
-            {/* update */}
+            <Route path="Account/*" element={<AccountPage />} />
           </Routes>
         </div>
       </div>
