@@ -12,9 +12,7 @@ export const signin = async (credentials) => {
   return response.data;
 };
 export const account = async () => {
-  console.log("wante account");
   const response = await request.post(`${USERS_API}/account`);
-  console.log(response);
   return response.data;
 };
 export const updateUser = async (user) => {
