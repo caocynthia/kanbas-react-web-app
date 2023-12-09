@@ -4,10 +4,11 @@ const request = axios.create({
   withCredentials: true,
 });
 
-export const BASE_API = process.env.REACT_APP_BASE_API_URL;
+export const BASE_API =
+  "https://caocynthia-kanbas-node-server-app-a6.onrender.com";
 export const USERS_API = `${BASE_API}/api/users`;
 
-console.log(BASE_API);
+console.log(USERS_API);
 
 export const signin = async (credentials) => {
   const response = await request.post(`${USERS_API}/signin`, credentials);
