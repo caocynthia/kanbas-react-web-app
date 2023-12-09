@@ -25,7 +25,7 @@ function AccountNav() {
         Sign up
       </Link>
       <Link
-        to="/Kanbas/Account/account"
+        to={"/Kanbas/Account/account"}
         className={
           pathname.includes("account")
             ? "wd-btn wd-btn-red"

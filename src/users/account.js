@@ -4,7 +4,16 @@ import { useParams } from "react-router";
 import { useNavigate, Link } from "react-router-dom";
 
 function Account() {
-  const [account, setAccount] = useState(null);
+  const [account, setAccount] = useState({
+    username: "",
+    password: "",
+    firstName: "",
+    lastName: "",
+    dob: "",
+    email: "",
+    role: "",
+  });
+
   const findUserById = async (id) => {
     const user = await client.findUserById(id);
     setAccount(user);
@@ -81,6 +90,7 @@ function Account() {
             />
             <select
               className="wd-input"
+              value={account.role}
               onChange={(e) => setAccount({ ...account, role: e.target.value })}
             >
               <option value="USER">User</option>
