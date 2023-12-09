@@ -9,14 +9,21 @@ function Signin() {
 
   const navigate = useNavigate();
 
+  const [error, setError] = useState("");
+
   const signin = async () => {
-    await client.signin(credentials);
-    navigate("/Kanbas/Account/account");
+    try {
+      await client.signin(credentials);
+      navigate("/Kanbas/Account/account/");
+    } catch (err) {
+      setError(err.message);
+    }
   };
 
   return (
     <div className="d-flex flex-column col-4 gap-2">
       <h3>Sign in</h3>
+      {error && <div>{error}</div>}
       <input
         className="wd-input"
         value={credentials.username}

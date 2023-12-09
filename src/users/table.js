@@ -21,6 +21,8 @@ function UserTable() {
   const [user, setUser] = useState({
     username: "",
     password: "",
+    firstName: "",
+    lastName: "",
     role: "USER",
   });
   const createUser = async () => {
